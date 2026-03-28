@@ -1,7 +1,24 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+:root {
+  --onyx-50: #F2F2F2;
+  --onyx-100: #E6E6E6;
+  --onyx-200: #CCCCCC;
+  --onyx-300: #B3B3B3;
+  --onyx-400: #999999;
+  --onyx-500: #808080;
+  --onyx-600: #666666;
+  --onyx-700: #4D4D4D;
+  --onyx-800: #333333;
+  --onyx-900: #1A1A1A;
+  --onyx-950: #121212;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  /* Oculta o cursor nativo para o Custom Cursor funcionar perfeitamente */
+  cursor: none !important;
 }
 html,
 body {
@@ -41,4 +58,55 @@ a {
 @font-face {
   font-family: "Nunito-SemiBold";
   src: local("Nunito-SemiBold");
+}
+
+/* =========================================
+   CUSTOM CURSOR
+   ========================================= */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+/* Feedback ao Clicar/Arrastar */
+.custom-cursor-follower.dragging {
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+}
+
+/* Feedback ao Hover em links e cartões */
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.custom-cursor-follower.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }

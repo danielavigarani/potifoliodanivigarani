@@ -66,10 +66,16 @@
   width: 1290px;
   height: 600px;
   max-width: 100%;
-  background: rgba(102, 102, 102, 0.2);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  background: 
+    linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
+    rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
   border-radius: 30px;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   z-index: 2;
 }
 
@@ -160,18 +166,82 @@
   width: 619px;
   height: 825px;
   max-width: 100%;
-  background: linear-gradient(226.41deg, #333333 0%, #1A1A1A 100%);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  
+  /* 1. O CORPO DO CARTÃO (Vidro Onyx) */
+  background: 
+    linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
+    rgba(18, 18, 18, 0.7); /* Mistura das cores onyx-800, onyx-900, onyx-950 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
+  
   border-radius: 30px;
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* 2. A BORDA NEON AFIADA (Onyx) */
+.timeline-card::before,
+.article-about-me::before,
+.article-expertise::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Ocupa 100% do cartão */
+  border-radius: inherit;
+  padding: 2px; /* A ESPESSURA DA BORDA NEON */
+  
+  /* O gradiente que gira em volta do cartão (usa prata claro e escuro) */
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    var(--onyx-100) 30%,
+    transparent 50%,
+    var(--onyx-400) 70%,
+    transparent 90%
+  );
+
+  /* A mágica do recorte para mostrar só a borda */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  pointer-events: none; /* Para não atrapalhar os cliques */
+  z-index: 10;
+}
+
+/* 3. O GLOW VAZANDO PRA FORA (A Luz Cinza) */
+.timeline-card::after,
+.article-about-me::after,
+.article-expertise::after {
+  content: "";
+  position: absolute;
+  inset: -5px; /* Vaza 5px pra fora do cartão */
+  border-radius: inherit;
+  
+  /* Mesmo gradiente da borda, convertido para RGBA para suportar transparência baseada no onyx 100 e 400 */
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    rgba(230, 230, 230, 0.4) 30%,
+    transparent 50%,
+    rgba(153, 153, 153, 0.4) 70%,
+    transparent 90%
+  );
+  
+  filter: blur(20px);
+  z-index: -1; /* Joga para trás do cartão */
+  pointer-events: none;
+}
+
 /* Efeito Hover nos Cards Grandes (Learning/Professional Path) */
-.timeline-card:hover {
+.timeline-card:hover,
+.article-about-me:hover,
+.article-expertise:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 23px 30px rgba(0, 0, 0, 0.4), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6); /* Sombra difusa e profunda ao flutuar */
 }
 
 .card-header-title {
@@ -407,20 +477,14 @@
 
 .professional-path-card {
   position: relative; /* Obrigatório para ancorar o gato absoluto */
-}
-
-/* Efeito visual brilhante (Ellipse 23) para o card de trajetória */
-.professional-path-card::before {
-  content: "";
-  position: absolute;
-  width: 113px;
-  height: 113px;
-  left: calc(50% - 56px);
-  top: calc(50% + 174px);
-  background: #999999;
-  filter: blur(83px);
-  pointer-events: none;
-  z-index: 0;
+  
+  /* Incorpora a elipse brilhante do cérebro diretamente no background!
+     Isso evita o uso de pseudo-elementos, permitindo que a borda neon do .timeline-card funcione perfeitamente aqui também. */
+  background: 
+    radial-gradient(circle at 50% calc(100% - 100px), rgba(153, 153, 153, 0.25) 0%, transparent 35%),
+    linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
+    rgba(18, 18, 18, 0.7);
 }
 
 /* Efeito decorativo final (Brain Icon) */
@@ -451,4 +515,173 @@
   100% {
     transform: translate3d(0, 0px, 0);
   }
+}
+
+/* =========================================
+   ARTICLE: EXPERTISE (Escala 0.75x)
+   ========================================= */
+.article-expertise {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+  gap: 30px;
+  width: 1290px;
+  max-width: 100%;
+  background: 
+    linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
+    rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 4;
+}
+
+.expertise-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px;
+  gap: 17px;
+  width: 593px;
+  max-width: 100%;
+}
+
+/* Headers de Seção */
+.expertise-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 11px;
+  width: 100%;
+  height: 37px;
+  opacity: 0; /* Invisível antes da animação sequencial */
+}
+
+.expertise-title i {
+  font-size: 27px;
+  color: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.expertise-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* Cartões Internos (Glassmorphism Onyx) */
+.expertise-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 6px;
+  width: 100%;
+  min-height: 67px;
+  
+  /* Efeito de Vidro Metálico Elegante */
+  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+  backdrop-filter: blur(9px); /* Desfoque do vidro fosco */
+  -webkit-backdrop-filter: blur(9px); /* Suporte para navegadores Apple */
+  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  
+  /* Bordas simulando o reflexo da luz no vidro/metal */
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  position: relative;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Invisível antes da animação sequencial */
+}
+
+.expertise-card:hover {
+  background: rgba(255, 255, 255, 0.12); /* Aumenta a opacidade simulando captação de luz */
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(255, 255, 255, 0.4); /* Reforça o brilho interno do vidro */
+  border-top: 2px solid rgba(255, 255, 255, 0.5); /* A borda superior reflete mais intensamente */
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px); /* Levanta o elemento suavemente */
+}
+
+.expertise-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.expertise-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  color: #B3B3B3; /* var(--onyx-300) */
+  margin: 0;
+}
+
+/* Modificador do Cartão de Idiomas */
+.languages-card {
+  align-items: center;
+  min-height: 45px;
+}
+
+.languages-card p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.languages-card .dimmed {
+  color: #B3B3B3;
+}
+
+/* Modificador do Cartão de Ferramentas */
+.tools-card {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  gap: 12px;
+}
+
+.tool-icon {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 75px;
+}
+
+.tool-icon img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
 }

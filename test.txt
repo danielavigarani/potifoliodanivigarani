@@ -1,19 +1,19 @@
-/* Article Trajetoria Profissional */
+/* Article Expertise */
 
 box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 50px;
-gap: 30px;
+gap: 40px;
 
-width: 825px;
-height: 1100px;
+width: 1720px;
+height: 802px;
 
-background: linear-gradient(226.41deg, #333333 0%, #1A1A1A 100%);
+background: linear-gradient(180deg, #1A1A1A 0%, #666666 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -22,42 +22,1257 @@ border-radius: 40px;
 
 /* Inside auto layout */
 flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 1;
-z-index: 2;
+order: 4;
+flex-grow: 0;
+z-index: 4;
 
-/* Frame 2504 */
+
+/* Frame 2511 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
-padding: 8px 0px;
-gap: 20px;
-isolation: isolate;
+align-items: center;
+padding: 50px;
+gap: 22px;
 
-width: 725px;
-height: 911px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-/* decorative_item */
-
-position: absolute;
-width: 252px;
-height: 252px;
-left: calc(50% - 252px/2 + 0.5px);
-top: 607px;
+width: 790px;
+height: 702px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 flex-grow: 0;
-z-index: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 690px;
+height: 49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* <i class="fa-light fa-graduation-cap"></i> */
+
+width: 48px;
+height: 39px;
+
+background: #CCCCCC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Formação */
+
+width: 210px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2518 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Marketing */
+
+width: 107px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Universidade Paulista (UNIP) - 2022 a 2025 */
+
+width: 304px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2519 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Técnico em Desenvolvimento de Sistemas */
+
+width: 435px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Etec José Ignácio Azevedo Filho - 2019 a 2021 */
+
+width: 323px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 690px;
+height: 49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* <i class="fa-duotone fa-solid fa-language"></i> */
+
+width: 50px;
+height: 44px;
+
+background: #CCCCCC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Idiomas */
+
+width: 167px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2520 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 60px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Português (Nativo) • Inglês (Intermediário) • Espanhol (Básico) */
+
+width: 509px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 690px;
+height: 49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* <i class="fa-regular fa-screwdriver-wrench"></i> */
+
+width: 41.84px;
+height: 41.84px;
+
+background: #CCCCCC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ferramentas */
+
+width: 266px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2521 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 85px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2482 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Notion */
+
+width: 25px;
+height: 25px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 2.28%;
+right: 2.28%;
+top: 0.35%;
+bottom: 0.16%;
+
+background: #FFFFFF;
+
+
+/* Frame 2483 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Figma */
+
+width: 15px;
+height: 22px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* path0_fill */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 50.01%;
+top: 66.66%;
+bottom: 0%;
+
+background: #FFFFFF;
+border: 0.5px solid #000000;
+
+
+/* path1_fill */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 50.01%;
+top: 33.34%;
+bottom: 33.33%;
+
+background: #FFFFFF;
+border: 0.5px solid #000000;
+
+
+/* path1_fill_1_ */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 50.01%;
+top: 0%;
+bottom: 66.67%;
+
+background: #FFFFFF;
+border: 0.5px solid #000000;
+
+
+/* path2_fill */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 50%;
+right: 0.01%;
+top: 0%;
+bottom: 66.67%;
+
+background: #FFFFFF;
+border: 0.5px solid #000000;
+
+
+/* path3_fill */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 50%;
+right: 0.01%;
+top: 33.34%;
+bottom: 33.33%;
+
+background: #FFFFFF;
+border: 0.5px solid #000000;
+
+
+/* Frame 2484 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Ps */
+
+width: 25px;
+height: 18.7px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 22.22%;
+right: 48.69%;
+top: 29.23%;
+bottom: 30.03%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 55.43%;
+right: 22.22%;
+top: 38.77%;
+bottom: 29.22%;
+
+background: #FFFFFF;
+
+
+/* Frame 2485 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* meta */
+
+width: 25px;
+height: 25px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 45.64%;
+right: 6.25%;
+top: 21.88%;
+bottom: 21.88%;
+
+background: #FFFFFF;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Vector */
+
+position: absolute;
+left: 6.25%;
+right: 46.57%;
+top: 21.88%;
+bottom: 21.88%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 31.25%;
+right: 21.87%;
+top: 21.88%;
+bottom: 21.88%;
+
+background: #FFFFFF;
+
+
+/* Frame 2486 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 20px 20px 18px;
+gap: 10px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Ai */
+
+width: 25px;
+height: 21.36px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 20%;
+right: 38.79%;
+top: 29.61%;
+bottom: 26.3%;
+
+background: #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 65.13%;
+right: 24.45%;
+top: 26.26%;
+bottom: 26.26%;
+
+background: #FFFFFF;
+
+
+/* Frame 2487 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 45px;
+height: 45px;
+
+background: rgba(255, 255, 255, 0.02);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Premium Icons */
+
+width: 25px;
+height: 25px;
+
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 10%;
+right: 13.33%;
+top: 10%;
+bottom: 13.33%;
+
+background: #FFFFFF;
+
+
+/* Frame 2512 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 50px;
+gap: 20px;
+
+width: 790px;
+height: 694px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 690px;
+height: 49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* <i class="fa-solid fa-folder-user"></i> */
+
+width: 48px;
+height: 39px;
+
+background: #CCCCCC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Expertise */
+
+width: 197px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2518 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Growth & Dados */
+
+width: 168px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Estratégia orientada a métricas, tráfego pago e testes de performance. */
+
+width: 509px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2519 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* UX/UI & CRO */
+
+width: 131px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Mapeamento de usabilidade e otimização contínua da taxa de conversão. */
+
+width: 530px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2520 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Copy & Conteúdo */
+
+width: 179px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Narrativas persuasivas e calendário editorial focado em engajamento real. */
+
+width: 533px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2521 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Gestão Ágil (Ops) */
+
+width: 178px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Orquestração de fluxos de trabalho, processos e alinhamento de equipes. */
+
+width: 528px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2522 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 690px;
+height: 89px;
+
+background: #4D4D4D;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Community Management */
+
+width: 267px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Moderação multicanal, construção de audiência e relacionamento estratégico B2B. */
+
+width: 598px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #B3B3B3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;

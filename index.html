@@ -24,6 +24,12 @@
 
       <nav class="navbar">
         <div class="logo">Dani<br><span class="vigarani-logo">Vigarani</span></div>
+
+          <div class="maintenance-alert" role="alert">
+          <i class="fa-solid fa-person-digging"></i>
+          <span>Site em construção (Início: 23/03/2026). Em breve finalizado!</span>
+        </div>
+        
         <div class="social-links">
           
           <div class="liquid-metal-link">
@@ -50,12 +56,12 @@
       </div>
 
       <div class="hero-image-container">
-        <img class="dani-portrait" src="img/dani_portrait.png" alt="Retrato de Dani Vigarani" />
+        <img class="dani-portrait" src="img/dani_portrait.png" alt="Retrato de Dani Vigarani" fetchpriority="high" loading="eager" decoding="async" />
       </div>
 
       <div class="scroll-indicator">
         <span>ARRASTE PARA CONTINUAR</span>
-        <img src="img/vector.svg" alt="Seta para baixo" />
+        <img src="img/vector.svg" alt="Seta para baixo" loading="lazy" />
       </div>
     </header>
 
@@ -75,7 +81,7 @@
       </div>
     </div>
     <div class="about-deco-column">
-      <img class="decorative-cat" src="img/decorative-cat.png" alt="Pixel Art Gato" />
+      <img class="decorative-cat" src="img/decorative-cat.png" alt="Pixel Art Gato" loading="lazy" />
     </div>
   </article>
 
@@ -162,14 +168,87 @@
           <time>Jan 2025 - Ago 2025</time>
         </div>
       </div>
-      <img class="deco-final" src="img/brain.png" alt="Cat Brain Decorative">
+      <img class="deco-final" src="img/brain.png" alt="Cat Brain Decorative" loading="lazy" />
     </article>
   </div>
 
+  <article class="article-expertise">
+    
+    <section class="expertise-column left-column">
+      
+      <header class="expertise-title">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>Formação</h2>
+      </header>
+      <div class="expertise-card">
+        <h3>Marketing</h3>
+        <p>Universidade Paulista (UNIP) - 2022 a 2025</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Técnico em Desenvolvimento de Sistemas</h3>
+        <p>Etec José Ignácio Azevedo Filho - 2019 a 2021</p>
+      </div>
+
+      <header class="expertise-title">
+        <i class="fa-solid fa-language"></i>
+        <h2>Idiomas</h2>
+      </header>
+      <div class="expertise-card languages-card">
+        <p>
+          <span>Português</span> <span class="dimmed">(Nativo)</span> • 
+          <span>Inglês</span> <span class="dimmed">(Intermediário)</span> • 
+          <span>Espanhol</span> <span class="dimmed">(Básico)</span>
+        </p>
+      </div>
+
+      <header class="expertise-title">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h2>Ferramentas</h2>
+      </header>
+      <div class="expertise-card tools-card">
+        <div class="tool-icon"><img src="img/notion.svg" alt="Notion" loading="lazy" /></div>
+        <div class="tool-icon"><img src="img/figma.svg" alt="Figma" loading="lazy" /></div>
+        <div class="tool-icon"><img src="img/ps.svg" alt="Photoshop" loading="lazy" /></div>
+        <div class="tool-icon"><img src="img/meta.svg" alt="Meta" loading="lazy" /></div>
+        <div class="tool-icon"><img src="img/ai.svg" alt="Illustrator" loading="lazy" /></div>
+      </div>
+
+    </section>
+
+    <section class="expertise-column right-column">
+      
+      <header class="expertise-title">
+        <i class="fa-solid fa-folder"></i>
+        <h2>Expertise</h2>
+      </header>
+      <div class="expertise-card">
+        <h3>Growth & Dados</h3>
+        <p>Estratégia orientada a métricas, tráfego pago e testes de performance.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>UX/UI & CRO</h3>
+        <p>Mapeamento de usabilidade e otimização contínua da taxa de conversão.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Copy & Conteúdo</h3>
+        <p>Narrativas persuasivas e calendário editorial focado em engajamento real.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Gestão Ágil (Ops)</h3>
+        <p>Orquestração de fluxos de trabalho, processos e alinhamento de equipes.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Community Management</h3>
+        <p>Moderação multicanal, construção de audiência e relacionamento estratégico B2B.</p>
+      </div>
+
+    </section>
+  </article>
   </section>
 
     <script type="module" src="js/liquid-metal.js"></script>
     <script type="module" src="js/glitch-effect.js"></script>
+    <script src="js/custom-cursor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/about-animation.js"></script>
     <script src="js/drag-scroll.js"></script>

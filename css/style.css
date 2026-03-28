@@ -52,6 +52,24 @@
   gap: 20px;
 }
 
+/* Alerta de Manutenção na Navbar */
+.maintenance-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(225, 225, 225, 0.1);
+  color: #F2F2F2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 /* EFEITO METÁLICO LÍQUIDO NO ÍCONE */
 .metallic-link {
   display: flex;
