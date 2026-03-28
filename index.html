@@ -172,5 +172,42 @@
     <script type="module" src="js/glitch-effect.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/about-animation.js"></script>
+    <script src="js/drag-scroll.js"></script>
+    
+    <script>
+      // IntersectionObserver para "desenhar" a linha da timeline e animar os balões sequencialmente
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const wrapper = entry.target;
+              
+              // Evita disparar a animação mais de uma vez
+              if (!wrapper.classList.contains("draw-line")) {
+                wrapper.classList.add("draw-line");
+                
+                // Seleciona os itens filhos do wrapper para o Fade In
+                const items = wrapper.querySelectorAll('.timeline-badge-container, .timeline-section-title, .timeline-item');
+                
+                anime({
+                  targets: items,
+                  opacity: [0, 1],
+                  translateY: [20, 0], // Leve deslize para cima acompanhando o fade in
+                  delay: anime.stagger(150, {start: 1000}), // Aguarda 1s (tempo da linha descer)
+                  duration: 800,
+                  easing: 'easeOutQuart',
+                  complete: function(anim) {
+                    // Remove o transform inline ao fim, garantindo que o Hover do CSS continue funcionando perfeitamente
+                    anim.animatables.forEach(a => a.target.style.transform = '');
+                  }
+                });
+              }
+            }
+          });
+        }, { threshold: 0.25 }); // Dispara quando 25% da timeline estiver visível na tela
+        
+        document.querySelectorAll(".timeline-wrapper").forEach(wrapper => observer.observe(wrapper));
+      });
+    </script>
   </body>
 </html>

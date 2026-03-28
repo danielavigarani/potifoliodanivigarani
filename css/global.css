@@ -7,6 +7,14 @@ html,
 body {
   margin: 0px;
   height: 100%;
+  /* Esconde o scrollbar nativo mas permite rolar via mousewheel/drag */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+
+/* Chrome, Safari e Edge Chromium */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
