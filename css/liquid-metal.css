@@ -1,0 +1,86 @@
+/* =========================================
+   LIQUID METAL EFFECT
+   ========================================= */
+
+/* Remove o estilo antigo para não haver conflito */
+.icon-container, .icon-container::before {
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  -webkit-mask: none;
+  mask-composite: none;
+}
+
+.liquid-metal-link {
+  position: relative;
+  width: 50px; /* Tamanho do container principal */
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.liquid-metal-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px; /* Diâmetro do círculo interno */
+  height: 42px;
+  background: linear-gradient(#444, #000);
+  border-radius: 50%;
+  box-shadow: inset 0 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.3);
+}
+
+.liquid-metal-link .outline {
+  /* O 'outline' agora é o próprio link <a> */
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Deve ser igual ao container principal */
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.liquid-metal-link .outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Largura da borda colorida */
+  border-radius: inherit;
+  background: conic-gradient(from 180deg, #444, #999, #fff, #999, #444);
+  filter: grayscale(1);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  transition: all 0.3s ease;
+}
+
+.liquid-metal-link:hover .outline::before {
+  padding: 1px;
+  filter: grayscale(0) drop-shadow(0 0 5px white);
+  background: conic-gradient(from 180deg, blue, purple, red, orange, yellow, green, blue);
+}
+
+.liquid-metal-link img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 5;
+  filter: brightness(0.8) grayscale(1);
+  transition: all 0.3s ease;
+}
+
+.liquid-metal-link:hover img {
+    filter: brightness(1) grayscale(0);
+}

@@ -1,0 +1,525 @@
+/* =========================================
+   HERO SECTION 
+   ========================================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #B3B3B3;
+}
+
+/* Camada de Ruído */
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/noise-texture.png');
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Navegação */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+}
+
+.logo {
+  font-family: 'Yellowtail', cursive;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.vigarani-logo {
+  padding-left: 25px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* EFEITO METÁLICO LÍQUIDO NO ÍCONE */
+.metallic-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 70px;
+  border-radius: 50%; /* Torna o contêiner circular */
+  position: relative;
+  z-index: 10;
+  /* Fundo semitransparente para o efeito de vidro */
+  background: rgba(255, 255, 255, 0.05); 
+  
+  /* 1. Background Blur: 10 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para navegadores baseados em WebKit */
+
+  /* 2. Inner Shadows (Duas sombras internas combinadas) */
+  /* Shadow 1: x0, y-2 blur 4 color 20% 000000 */
+  /* Shadow 2: x0, y2 blur 4 color 40% FFFFFF */
+  box-shadow: 
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 
+    inset 0 2px 4px rgba(255, 255, 255, 0.4);
+
+  /* Efeito de transição suave */
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Gradiente de borda diagonal e transparência usando um pseudo-elemento */
+.icon-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 2px; /* Largura do "stroke" */
+  
+  /* 3. Figma Stroke: Linear Gradient (diagonal 135deg - direita para esquerda) */
+  /* Posição: Inside (é simulada pelo padding e mask) */
+  /* Gradiente: 0% 5%, 50% 100%, 100% 5% (todos FFFFFF) */
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 1) 50%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  
+  /* Máscara para garantir que o gradiente apareça apenas como borda */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  /* pointer-events: none; para não interferir no clique */
+  pointer-events: none; 
+}
+
+/* Ícone dentro do contêiner metálico */
+.social-links .icon-container img {
+  width: 24px; /* Tamanho do ícone real */
+  height: 24px;
+  position: relative;
+  z-index: 5; /* Garante que o ícone fique acima do efeito de borda */
+}
+
+/* Efeitos de Hover */
+.metallic-link:hover {
+  transform: translateY(-3px); /* Pequeno pulo ao passar o mouse */
+}
+
+.metallic-link:hover .icon-container {
+  /* Altera a intensidade do fundo e das sombras no hover */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    inset 0 -3px 6px rgba(0, 0, 0, 0.3), 
+    inset 0 3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================
+   OUTROS ELEMENTOS DA HERO 
+   ========================================= */
+/* Textos Repetidos ao Fundo */
+.background-text {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+  text-align: center;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+}
+
+.text-row {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 96px;
+  white-space: nowrap;
+  text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4); 
+  width: max-content;
+}
+
+/* =========================================
+   ANIMAÇÃO SCROLL BACKGROUND TEXT
+   ========================================= */
+/* Define o movimento para a esquerda */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Define o movimento para a direita */
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.text-row:nth-child(odd) {
+  animation: marquee-left 40s linear infinite;
+}
+
+.text-row:nth-child(even) {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Retrato (Sua Foto) */
+.hero-image-container {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  height: 95%;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dani-portrait {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 30px rgba(0,0,0,0.8));
+}
+
+/* Indicador de Arrastar */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  animation: bounce-indicator 2.5s ease-in-out infinite;
+}
+
+.scroll-indicator img {
+  width: 20px;
+}
+
+@keyframes bounce-indicator {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 5px);
+  }
+}
+
+/* =========================================
+   SECTION ABOUT (CONTAINER PRINCIPAL)
+   ========================================= */
+.section-about {
+  position: relative;
+  width: 100%;
+  min-height: 3000px;
+  padding: 50px clamp(20px, 5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* NOVO */
+  gap: 50px;
+  background: linear-gradient(180deg, #101010 40%, #4D4D4D 100%);
+  overflow-x: hidden;
+}
+
+/* Letras Decorativas ao Fundo */
+.section-about .aa-decorative {
+  position: absolute;
+  top: -50px;
+  left: -16px;
+  transform: rotate(-22.98deg);
+  filter: blur(10px);
+  opacity: 0.03;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 240px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-about .decorative {
+  position: absolute;
+  top: 586px;
+  left: 1672px;
+  transform: rotate(8deg);
+  filter: blur(10px);
+  opacity: 0.03;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 300px; /* Ajustei para ficar proporcional */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =========================================
+   ARTICLE 1: SOBRE MIM
+   ========================================= */
+.article-about-me {
+  position: relative;
+  z-index: 2;
+  width: 1720px;
+  height: 800px; 
+  padding: 50px;
+  background-color: #66666633;
+  border-radius: 40px;
+  box-sizing: border-box; 
+  display: flex; /* ALTERADO */
+  flex-direction: row; /* ALTERADO */
+  gap: 24px; /* NOVO */
+  align-items: flex-start; /* NOVO */
+}
+
+.about-text-column {
+  flex: 1;
+}
+
+.about-deco-column {
+  position: relative;
+  width: 200px;
+  height: 100%;
+}
+
+/* O Gatinho no canto superior direito */
+.article-about-me .decorative-cat {
+  position: absolute;
+  top: 0; /* ALTERADO */
+  right: 0; /* ALTERADO */
+  width: 196px; 
+  height: 196px;
+  object-fit: contain;
+}
+
+/* Container do Texto (Ocupa o espaço restante) */
+.article-about-me .content-frame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  padding: 0;
+}
+
+.article-about-me .text-wrapper {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 88px;
+  margin: 0;
+}
+
+.article-about-me .about-text-block {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #f2f2f2;
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 10px; /* ALTERADO */
+}
+
+.article-about-me .text-wrapper-2 {
+  font-weight: 700; 
+  color: #ffffff;
+}
+
+/* =========================================
+   TIMELINE CARDS (CONTAINER)
+   ========================================= */
+.timeline-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70px;
+  width: 1720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline-card {
+  width: 825px;
+  height: 1100px;
+  background: linear-gradient(226deg, #333333 0%, #1A1A1A 100%);
+  border-radius: 40px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: inset 0px 4px 10px rgba(0,0,0,0.5), inset 0px -4px 10px rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-header-title {
+  display: flex;
+  align-items: center; /* Centraliza o ícone e o texto verticalmente */
+  justify-content: center; /* Centraliza o conjunto todo no meio do cartão */
+  gap: 20px; /* Um respiro um pouquinho maior entre ícone e texto */
+  margin-bottom: 50px; 
+}
+
+/* Garante que o ícone FontAwesome mantenha a forma e alinhamento */
+.card-header-title i {
+  flex-shrink: 0; /* Impede que o flexbox esprema o ícone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* Remove qualquer espaçamento extra nativo da fonte do ícone */
+}
+
+/* Ajuste no título para acomodar as quebras de linha perfeitamente */
+.card-header-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px; /* Tamanho 40px conforme solicitado */
+  margin: 0;
+  display: flex; /* Transforma em flex para garantir o alinhamento correto */
+  align-items: center; /* Align middle (alinhamento vertical ao centro) */
+  white-space: nowrap; /* Garante que todo o texto fique na mesma linha */
+}
+
+/* Ocultar a tag <br> se ela existir para garantir que o texto não quebre de linha */
+.card-header-title h2 br {
+  display: none; /* Força a ficar na mesma linha escondendo a quebra */
+}
+
+
+.timeline-wrapper {
+  border-left: 2px solid rgba(255, 255, 255, 0.25);
+  margin-left: 60px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 15px; /* A linha tem um gap de 15px do badge */
+}
+
+.timeline-badge-container {
+  position: relative;
+  top: -15px;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -51px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #f2f2f2;
+  box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  transform: translateX(-50%); 
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.timeline-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 25px 0 30px 0; /* 25px de gap da badge (topo) e 30px de gap pro timeline-item (fundo) */
+  letter-spacing: 1px;
+}
+
+.timeline-item {
+  position: relative;
+  background-color: #4D4D4D;
+  padding: 15px 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px; /* 30 de gap cada um (entre os timeline-items) */
+  box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4);
+}
+
+.timeline-item .marker {
+  position: absolute;
+  left: -61px;
+  top: 20px; /* O marker acompanha cada item graças ao position absolute baseado no item relativo */
+  width: 20px;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.timeline-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.timeline-item span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.timeline-item time {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #808080;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+.deco-final {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+  z-index: 15;
+}
+
+/* Fundo decorativo corrigido */
+.section-about .aa-decorative,
+.section-about .decorative {
+  z-index: 1; /* Garante que fique atrás de tudo */
+}
