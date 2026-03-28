@@ -1,0 +1,407 @@
+/* =========================================
+   SECTION ABOUT (Traduzido do Figma)
+   ========================================= */
+
+/* Fundo Geral */
+.section-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  gap: 50px;
+  position: relative;
+  width: 1920px;
+  max-width: 100%; /* Boa prática: impede que quebre layouts menores */
+  background: linear-gradient(180deg, #101010 40%, #4D4D4D 100%);
+  overflow: hidden; /* Mantém as letras decorativas contidas na seção */
+}
+
+/* Letras de Fundo (Decorativas) */
+.aa-decorative {
+  position: absolute;
+  width: 332px;
+  height: 293px;
+  left: -60px;
+  top: -103px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 240px;
+  line-height: 293px;
+  color: #FFFFFF;
+  opacity: 0.05;
+  filter: blur(5px);
+  transform: rotate(-22.98deg);
+  z-index: 0;
+}
+
+.decorative {
+  position: absolute;
+  width: 219px;
+  height: 366px;
+  /* Convertido de left: 1648px para 'right' para se ajustar melhor a qualquer tela */
+  right: 50px; 
+  top: 573px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 300px;
+  line-height: 366px;
+  color: #FFFFFF;
+  opacity: 0.05;
+  filter: blur(5px);
+  transform: rotate(8deg);
+  z-index: 1;
+}
+
+/* =========================================
+   ARTICLE: ABOUT ME
+   ========================================= */
+.article-about-me {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 8px;
+  width: 1720px;
+  height: 800px;
+  max-width: 100%;
+  background: rgba(102, 102, 102, 0.2);
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 40px;
+  z-index: 2;
+}
+
+.about-text-column {
+  /* Coluna que serve como container para o bloco de texto.
+     Como item flex, ela vai ocupar o espaço disponível. */
+  flex: 1;
+}
+
+.content-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 20px;
+  width: 1400px;
+  max-width: 100%;
+  height: 700px;
+  margin: 0 auto; /* Aplica a margem para centralizar o bloco de conteúdo dentro da coluna */
+}
+
+.text-wrapper {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 131px;
+  color: #FFFFFF;
+  margin: 0 0 20px 0; /* 20px de margin + 30px de gap = 50px de distância para o primeiro parágrafo */
+}
+
+.about-text-block {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F2F2F2;
+  margin: 0;
+}
+
+.text-wrapper-2 {
+  /* Destaques dentro do parágrafo, herda a fonte e muda só o peso/cor se precisar */
+  font-weight: 700;
+}
+
+.about-deco-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+  margin: 0 auto;
+  width: 196px;
+  height: 700px;
+}
+
+.decorative-cat {
+  width: 196px;
+  height: 196px;
+  object-fit: contain;
+}
+
+/* =========================================
+   TIMELINE CARDS CONTAINER
+   ========================================= */
+.timeline-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 70px;
+  width: 1720px;
+  height: 1100px;
+  max-width: 100%;
+  isolation: isolate;
+  z-index: 3;
+}
+
+/* Base dos Cards Maiores (Learning / Professional Path) */
+.timeline-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+  width: 825px;
+  height: 1100px;
+  max-width: 100%;
+  background: linear-gradient(226.41deg, #333333 0%, #1A1A1A 100%);
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 40px;
+  position: relative;
+}
+
+.card-header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+  width: 660px;
+  height: 59px;
+}
+
+.card-header-title i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header-title h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.professional-path-card .card-header-title h2 {
+  font-size: 40px;
+  line-height: 49px;
+  width: 593px;
+}
+
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0px;
+  gap: 20px;
+  width: 725px;
+  height: 911px;
+  max-width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Permite que o container encolha para abraçar os balões e não force 911px de altura */
+.professional-path-card .timeline-wrapper {
+  height: auto;
+}
+
+/* Linha vertical da linha do tempo */
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #F2F2F2;
+  top: 73px;
+  z-index: 0;
+}
+
+.learning-path-card .timeline-wrapper::before {
+  left: 103px;
+  height: 750px;
+}
+
+.professional-path-card .timeline-wrapper::before {
+  left: 114px;
+  height: 550px;
+}
+
+/* Badges dos Anos (2024 - 2026) */
+.timeline-badge-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 8px;
+  width: fit-content;
+  min-width: 190px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.professional-path-card .timeline-badge-container {
+  min-width: 230px;
+}
+
+.timeline-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #F2F2F2;
+}
+
+/* Títulos de Seção (Ex: EM PROGRESSO) */
+.timeline-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.learning-path-card .timeline-section-title {
+  margin: 0 0 0 143px;
+}
+
+.professional-path-card .timeline-section-title {
+  margin: 0 0 0 154px;
+}
+
+/* =========================================
+   ITENS DA TIMELINE (OS CARDS PEQUENOS)
+   ========================================= */
+.timeline-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 20px;
+  gap: 8px;
+  width: auto;
+  background: #4D4D4D;
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.learning-path-card .timeline-item {
+  margin-left: 143px;
+}
+
+.professional-path-card .timeline-item {
+  margin-left: 154px;
+}
+
+/* Tipografia dos Cursos/Trabalhos */
+.timeline-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.timeline-item span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #B3B3B3;
+}
+
+.timeline-item time {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #808080;
+}
+
+/* Marcadores ao lado de cada item */
+.timeline-item .marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #F2F2F2;
+  border-radius: 50%;
+}
+
+.professional-path-card {
+  position: relative; /* Obrigatório para ancorar o gato absoluto */
+}
+
+/* Efeito visual brilhante (Ellipse 23) para o card de trajetória */
+.professional-path-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: calc(50% - 75px);
+  top: calc(50% + 232.5px);
+  background: #999999;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Efeito decorativo final (Brain Icon) */
+.professional-path-card .deco-final {
+  display: block; /* Garante que não herde inline-flex */
+  margin-top: -10px; /* O card pai tem um gap de 30px. -10px de margem = ~20px de distância do último balão */
+  
+  /* Dimensões do Figma */
+  width: 252px; 
+  height: 252px;
+  object-fit: contain;
+  
+  /* Garante que fique acima do fundo cinza mas abaixo da borda externa se houver */
+  z-index: 5; 
+  animation: floatBrain 4s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden; /* Força a estabilização das bordas para não piscar */
+}
+
+/* Animação de flutuação suave para o cérebro */
+@keyframes floatBrain {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -15px, 0); /* Move a imagem suavemente 15px para cima via GPU */
+  }
+  100% {
+    transform: translate3d(0, 0px, 0);
+  }
+}
