@@ -1,4 +1,4 @@
-/* Section_Portfolio_Intro_Copywriting */
+/* Portfolio_Intro_SocialMedia */
 
 /* Auto layout */
 display: flex;
@@ -6,34 +6,12 @@ flex-direction: column;
 align-items: center;
 padding: 50px 100px;
 gap: 50px;
-isolation: isolate;
 
 position: relative;
 width: 1920px;
-height: 1480px;
+height: 1066px;
 
-background: #945438;
-
-
-/* Portifólio */
-
-width: 437px;
-height: 174px;
-
-font-family: 'Yellowtail';
-font-style: normal;
-font-weight: 400;
-font-size: 128px;
-line-height: 174px;
-
-color: #F8F0ED;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+background: #171717;
 
 
 /* subtitle */
@@ -51,15 +29,14 @@ height: 117px;
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 0;
 align-self: stretch;
 flex-grow: 0;
-z-index: 1;
 
 
-/* Copy */
+/* Social Media */
 
-width: 253px;
+width: 632px;
 height: 117px;
 
 font-family: 'Montserrat';
@@ -83,35 +60,78 @@ flex-grow: 0;
 /* Auto layout */
 display: flex;
 flex-direction: row;
-justify-content: space-between;
 align-items: flex-start;
 padding: 0px;
+isolation: isolate;
 
 width: 1720px;
-height: 989px;
+height: 779px;
 
 
 /* Inside auto layout */
 flex: none;
-order: 2;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
-z-index: 2;
 
 
-/* teus-img */
+/* div */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
-padding: 50px 20px;
-gap: 8px;
+padding: 0px;
+gap: 15px;
+isolation: isolate;
 
-margin: 0 auto;
-width: 540px;
-height: 989px;
+width: 560px;
+height: 779px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 560px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Paschoalin */
+
+width: 274px;
+height: 59px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -122,16 +142,54 @@ flex-grow: 0;
 
 /* 541002392_18473833849077084_454137477132073766_n 1 */
 
-width: 500px;
-height: 889px;
+width: 396px;
+height: 705px;
 
-background: url(541002392_18473833849077084_454137477132073766_n.jpg);
+background: url(491452958_18497043217007402_8638024980741355996_n.jpg);
 border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 flex-grow: 0;
+z-index: 1;
+
+
+/* amor 1 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 43px;
+top: 47px;
+
+background: url(amor.png);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Frame 2535 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 1160px;
+height: 779px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
 
 
 /* divs */
@@ -140,43 +198,62 @@ flex-grow: 0;
 display: flex;
 flex-direction: row;
 justify-content: center;
-align-items: center;
+align-items: flex-start;
 padding: 0px;
 gap: 20px;
 
-margin: 0 auto;
-width: 1180px;
-height: 973px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* grid_1 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 20px;
-
-width: 580px;
-height: 973px;
+width: 1160px;
+height: 579px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2528 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 20px;
+
+width: 1160px;
+height: 579px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 1;
 
 
-/* challenges */
+/* grid */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 1120px;
+height: 509px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2529 */
 
 /* Auto layout */
 display: flex;
@@ -185,15 +262,14 @@ align-items: flex-start;
 padding: 0px;
 gap: 10px;
 
-width: 540px;
-height: 506px;
+width: 550px;
+height: 509px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
-flex-grow: 0;
+flex-grow: 1;
 
 
 /* title */
@@ -205,7 +281,7 @@ align-items: center;
 padding: 0px;
 gap: 15px;
 
-width: 540px;
+width: 550px;
 height: 59px;
 
 
@@ -216,7 +292,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* <i class="ph ph-target"></i> */
+/* Frame */
 
 width: 40px;
 height: 40px;
@@ -231,17 +307,17 @@ flex-grow: 0;
 /* Vector */
 
 position: absolute;
-left: 9.32%;
-right: 9.36%;
-top: 9.36%;
-bottom: 9.31%;
+left: 9.38%;
+right: 9.38%;
+top: 12.5%;
+bottom: 0%;
 
-background: #F1E1DA;
+background: #FEE6EA;
 
 
-/* Desafio */
+/* O Projeto */
 
-width: 190px;
+width: 237px;
 height: 59px;
 
 font-family: 'Montserrat';
@@ -254,7 +330,7 @@ display: flex;
 align-items: center;
 text-align: center;
 
-color: #F1E1DA;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -275,10 +351,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 106px;
+width: 550px;
+height: 140px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -292,9 +369,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* O Momento */
+/* O Cliente */
 
-width: 123px;
+width: 95px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -304,7 +381,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -313,10 +390,10 @@ order: 0;
 flex-grow: 0;
 
 
-/* Contagem regressiva para o aguardado lançamento de Hollow Knight: Silksong. */
+/* Criador de conteúdo e streamer de variedades, com foco no universo dos games independentes e lifestyle. Conhecido por sua identidade com forte influência cyberpunk e por sua marca registrada inconfundível: o icônico bigode. */
 
-width: 500px;
-height: 34px;
+width: 510px;
+height: 68px;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -346,10 +423,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 89px;
+width: 550px;
+height: 174px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -363,9 +441,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* O Formato */
+/* O Projeto */
 
-width: 111px;
+width: 97px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -375,7 +453,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -384,17 +462,16 @@ order: 0;
 flex-grow: 0;
 
 
-/* Vídeo curto de retenção rápida. */
+/* Foi desenvolvida uma estratégia de crescimento focada em organização de processos, análise rigorosa de métricas e otimização de conteúdo multiplataforma. O objetivo era escalar a presença digital do criador, transformando clipes de lives e conteúdos orgânicos em um ecossistema estruturado, abrindo portas para novas parcerias e conexões reais com a comunidade e marcas. */
 
-width: 500px;
-height: 17px;
+width: 510px;
+height: 102px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 17px;
-/* identical to box height */
 
 color: #7D736E;
 
@@ -418,10 +495,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
+width: 550px;
 height: 106px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -435,9 +513,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* O Público-Alvo */
+/* O Objetivo */
 
-width: 153px;
+width: 110px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -447,7 +525,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -456,9 +534,9 @@ order: 0;
 flex-grow: 0;
 
 
-/* Fãs do jogo + Novatos curiosos surfando no hype. */
+/* Entregar uma copy que acompanhasse essa qualidade visual, mantendo a autenticidade de "fã para fã" */
 
-width: 500px;
+width: 510px;
 height: 34px;
 
 font-family: 'Montserrat';
@@ -477,78 +555,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 2521 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 540px;
-height: 106px;
-
-background: #25150E;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* A Missão */
-
-width: 92px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #E3C3B5;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Prender a atenção no primeiro segundo e engatilhar o compartilhamento orgânico. */
-
-width: 500px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* strategy */
+/* Frame 2532 */
 
 /* Auto layout */
 display: flex;
@@ -557,15 +564,14 @@ align-items: flex-start;
 padding: 0px;
 gap: 10px;
 
-width: 540px;
-height: 407px;
+width: 550px;
+height: 509px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
-flex-grow: 0;
+flex-grow: 1;
 
 
 /* title */
@@ -577,7 +583,7 @@ align-items: center;
 padding: 0px;
 gap: 15px;
 
-width: 540px;
+width: 550px;
 height: 59px;
 
 
@@ -608,12 +614,12 @@ right: 9.37%;
 top: 12.5%;
 bottom: 12.5%;
 
-background: #F1E1DA;
+background: #FEE6EA;
 
 
-/* A Estratégia */
+/* Atuação */
 
-width: 306px;
+width: 210px;
 height: 59px;
 
 font-family: 'Montserrat';
@@ -626,7 +632,7 @@ display: flex;
 align-items: center;
 text-align: center;
 
-color: #F1E1DA;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -647,10 +653,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 106px;
+width: 550px;
+height: 140px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -664,9 +671,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* O "Hook" Nostálgico */
+/* Estratégia Editorial e Copywriting */
 
-width: 209px;
+width: 345px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -676,7 +683,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -685,10 +692,10 @@ order: 0;
 flex-grow: 0;
 
 
-/* Abri o texto citando Hallownest (reino do primeiro jogo) para criar cumplicidade imediata com os veteranos e curiosidade nos novatos. */
+/* Estruturação de um calendário de postagens inteligente e consistente. Criação de roteiros engajadores e textos persuasivos (Copy), garantindo que a essência, o humor e a estética cyberpunk do criador fossem mantidos em todos os pontos de contato. */
 
-width: 500px;
-height: 34px;
+width: 510px;
+height: 68px;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -718,10 +725,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 106px;
+width: 550px;
+height: 140px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -735,9 +743,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* SEO Integrado */
+/* Análise de Dados e Performance */
 
-width: 150px;
+width: 336px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -747,7 +755,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -756,10 +764,10 @@ order: 0;
 flex-grow: 0;
 
 
-/* Injeção natural de palavras-chave de alto volume para o algoritmo. (Silksong, Hollow Knight, resumão, completo, lançamento). */
+/* Monitoramento constante de métricas e testes de performance para entender o comportamento do algoritmo e da audiência. O crescimento expressivo de alcance e views foi resultado direto de uma adaptação rápida e orientada por dados. */
 
-width: 500px;
-height: 34px;
+width: 510px;
+height: 68px;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -789,10 +797,11 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 106px;
+width: 550px;
+height: 140px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -806,9 +815,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Engenharia de Engajamento */
+/* PR, Relacionamento e Networking */
 
-width: 296px;
+width: 355px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -818,7 +827,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #E3C3B5;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -827,10 +836,10 @@ order: 0;
 flex-grow: 0;
 
 
-/* Um Call to Action focado 100% na métrica de compartilhamento ("Manda este vídeo para aquele amigo"). */
+/* Atuação estratégica nos bastidores para conectar o criador a novas oportunidades de negócios. Auxílio direto nas negociações, contato com marcas e expansão da rede de networking dentro do cenário de games e tecnologia. */
 
-width: 500px;
-height: 34px;
+width: 510px;
+height: 68px;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -848,52 +857,42 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* grid_2 */
-
-box-sizing: border-box;
+/* grid */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-align-items: flex-start;
-padding: 20px;
-gap: 66px;
+align-items: center;
+padding: 0px 20px;
+gap: 8px;
 
-width: 580px;
-height: 973px;
+width: 1160px;
+height: 200px;
 
-background: rgba(37, 21, 14, 0.2);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
-flex-grow: 1;
+flex-grow: 0;
 
 
-/* client */
+/* Frame 2531 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+justify-content: center;
+align-items: center;
 padding: 0px;
-gap: 10px;
+gap: 20px;
 
-margin: 0 auto;
-width: 540px;
-height: 373px;
+width: 1120px;
+height: 200px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
@@ -906,8 +905,8 @@ align-items: center;
 padding: 0px;
 gap: 15px;
 
-width: 540px;
-height: 59px;
+width: 1120px;
+height: 49px;
 
 
 /* Inside auto layout */
@@ -917,285 +916,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Teus Belizário */
-
-width: 348px;
-height: 59px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #F1E1DA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 2518 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 345px;
-height: 89px;
-
-background: #25150E;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* O Cliente */
-
-width: 95px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #E3C3B5;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Criador de conteúdo de Games & Lifestyle. */
-
-width: 305px;
-height: 17px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-text-align: center;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2519 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 437px;
-height: 89px;
-
-background: #25150E;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* O Padrão */
-
-width: 96px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #E3C3B5;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vídeos com edição impecável e comunidade engajada. */
-
-width: 397px;
-height: 17px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-text-align: center;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2520 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 540px;
-height: 106px;
-
-background: #25150E;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* O Objetivo */
-
-width: 110px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #E3C3B5;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Entregar uma copy que acompanhasse essa qualidade visual, mantendo a autenticidade de "fã para fã" */
-
-width: 500px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* final_delivery */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-margin: 0 auto;
-width: 540px;
-height: 544px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* title */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 540px;
-height: 59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
+/* <i class="ph ph-target"></i> */
 
 width: 40px;
 height: 40px;
@@ -1210,30 +931,30 @@ flex-grow: 0;
 /* Vector */
 
 position: absolute;
-left: 12.5%;
-right: 9.37%;
-top: 25%;
-bottom: 18.75%;
+left: 9.32%;
+right: 9.36%;
+top: 9.36%;
+bottom: 9.31%;
 
-background: #F1E1DA;
+background: #FEE6EA;
 
 
-/* Entrega Final */
+/* Resultados */
 
-width: 336px;
-height: 59px;
+width: 233px;
+height: 49px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 48px;
-line-height: 59px;
+font-size: 40px;
+line-height: 49px;
 /* identical to box height */
 display: flex;
 align-items: center;
 text-align: center;
 
-color: #F1E1DA;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
@@ -1242,7 +963,27 @@ order: 1;
 flex-grow: 0;
 
 
-/* Frame 2521 */
+/* Frame 2537 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 1120px;
+height: 131px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2518 */
 
 box-sizing: border-box;
 
@@ -1254,10 +995,85 @@ align-items: center;
 padding: 20px;
 gap: 8px;
 
-width: 540px;
-height: 475px;
+width: 360px;
+height: 131px;
 
-background: #25150E;
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* +259,7% */
+
+width: 163px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FEE6EA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Alcance Multiplataforma (no primeiro mês) */
+
+width: 320px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2519 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 8px;
+
+width: 360px;
+height: 131px;
+
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -1271,66 +1087,125 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* “Quer jogar Silksong, mas nunca pisou em Hallownest?  Silksong está chegando e a gente sabe que a ansiedade é real! Mas para você não ficar perdido na história, preparei um resumão completo com TUDO o que você precisa saber sobre a jornada do Cavaleiro em Hollow Knight.  Manda este vídeo para aquele amigo que está contando os dias para o lançamento, mas que pulou o primeiro jogo!”  */
+/* +116,7% */
 
-width: 500px;
-height: 435px;
+width: 147px;
+height: 49px;
 
 font-family: 'Montserrat';
 font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 29px;
+font-weight: 600;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
 text-align: center;
 
-color: #F8F0ED;
+color: #FEE6EA;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+flex-grow: 0;
+
+
+/* Aumento de Visualizações (no primeiro mês) */
+
+width: 320px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* eevee-decorative */
+/* Frame 2520 */
 
-position: absolute;
-width: 258px;
-height: 258px;
-left: 1651px;
-top: 348px;
+box-sizing: border-box;
 
-background: url(image.png);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 8px;
 
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-z-index: 3;
+width: 360px;
+height: 131px;
 
-
-/* silksong-decorative */
-
-position: absolute;
-width: 400px;
-height: 278px;
-left: 28px;
-top: 1211px;
-
-background: url(image.png);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-transform: matrix(-1, 0, 0, 1, 0, 0);
+/* Pas */
+background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
-order: 4;
+order: 2;
+align-self: stretch;
 flex-grow: 0;
-z-index: 4;
 
 
-/* link https://www.instagram.com/p/DOEu2OHEd35/ */
+/* +245,5% */
+
+width: 164px;
+height: 49px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+
+color: #FEE6EA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Aumento de Seguidores (no primeiro mês) */
+
+width: 320px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* https://www.instagram.com/reel/DJJ8rqAOIC7/ */
 
 box-sizing: border-box;
 
@@ -1345,8 +1220,8 @@ gap: 10px;
 position: absolute;
 width: 45px;
 height: 45px;
-left: 575px;
-top: 1390px;
+left: 433px;
+top: 789px;
 
 background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
@@ -1356,9 +1231,9 @@ border-radius: 100px;
 
 /* Inside auto layout */
 flex: none;
-order: 5;
+order: 2;
 flex-grow: 0;
-z-index: 5;
+z-index: 2;
 
 
 /* Vector */

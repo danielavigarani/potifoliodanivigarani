@@ -99,22 +99,59 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioObserver.observe(portfolioSection);
 
     // =========================================
-    // EFEITO MUDANÇA DE ESTAÇÃO (COLOR MORPHING)
+    // EFEITO MUDANÇA DE ESTAÇÃO (COLOR MORPHING MULTI-SEÇÕES)
     // =========================================
-    const themeObserver = new IntersectionObserver((entries) => {
+    const bgSections = [
+      { element: document.querySelector('.section-about'), bgClass: 'theme-base' },
+      { element: document.querySelector('.section-portfolio'), bgClass: 'theme-brown' },
+      { element: document.querySelector('.section-socialmedia'), bgClass: 'theme-dark' }
+    ];
+
+    const bgObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Adiciona a classe ao body quando a seção do portfólio entra na tela
-          document.body.classList.add('theme-brown');
-        } else {
-          // Remove a classe quando a seção sai da tela (scroll para cima)
-          document.body.classList.remove('theme-brown');
+          // Remove todas as classes de background antes de aplicar a nova
+          document.body.classList.remove('theme-base', 'theme-brown', 'theme-dark');
+          
+          const activeSec = bgSections.find(sec => sec.element === entry.target);
+          if (activeSec && activeSec.bgClass) {
+            document.body.classList.add(activeSec.bgClass);
+          }
         }
       });
     }, {
-      threshold: 0.15 // Gatilho mais rápido: a cor muda quando 15% da seção entrar na tela
+      rootMargin: '-40% 0px -40% 0px' // A mágica: Só troca a cor quando a seção atinge perfeitamente o MEIO da tela!
     });
 
-    themeObserver.observe(portfolioSection);
+    bgSections.forEach(sec => {
+      if (sec.element) bgObserver.observe(sec.element);
+    });
+  }
+  
+  // =========================================
+  // ANIMAÇÃO DA SEÇÃO SOCIAL MEDIA (FADE IN SEQUENCIAL)
+  // =========================================
+  const socialMediaSection = document.querySelector('.section-socialmedia');
+  if (socialMediaSection) {
+    const smItems = socialMediaSection.querySelectorAll('.creator-profile, .section-title, .section-title-results, .card, .result-card');
+    
+    const smObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: smItems,
+          opacity: [0, 1],
+          translateY: [20, 0],
+          delay: anime.stagger(100), // Cascata perfeita
+          duration: 800,
+          easing: 'easeOutQuart',
+          complete: function(anim) {
+            anim.animatables.forEach(a => a.target.style.transform = '');
+          }
+        });
+        smObserver.unobserve(socialMediaSection);
+      }
+    }, { threshold: 0.15 });
+    
+    smObserver.observe(socialMediaSection);
   }
 });

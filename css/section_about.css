@@ -723,6 +723,7 @@
   background: transparent;
   box-sizing: border-box;
   overflow-x: hidden; /* Garante que as decorações absolutas não gerem scroll horizontal */
+  margin-bottom: clamp(30px, 4vw, 60px); /* Aumenta o gap final entre as seções em ~30px a mais */
 }
 
 /* Títulos Globais */
@@ -1020,12 +1021,12 @@
 }
 
 /* Efeito de levitação nas imagens decorativas quando o card principal recebe hover */
-.section-portfolio .article:hover .eevee-decorative {
-  transform: translateY(-10px) rotate(3deg); /* Leve rotação para dar mais vida */
+.section-portfolio .article:hover ~ .eevee-decorative {
+  transform: translateY(-10px) rotate(-5deg); /* Efeito de flutuação igual ao do 'amor' */
 }
 
-.section-portfolio .article:hover .silksong-decorative {
-  transform: matrix(-1, 0, 0, 1, 0, 0) translateY(-12px) rotate(-2deg); /* Combina a inversão com a levitação e rotação */
+.section-portfolio .article:hover ~ .silksong-decorative {
+  transform: matrix(-1, 0, 0, 1, 0, 0) translateY(-10px) rotate(-5deg); /* Combina a inversão com a levitação e rotação, igual ao do 'amor' */
 }
 
 /* Botão Link Instagram */
@@ -1052,6 +1053,431 @@
   background: rgba(255, 255, 255, 0.1);
 }
 .section-portfolio .link-instagram img {
-  width: clamp(10px, 1.2vw, 17px);
-  height: clamp(10px, 1.2vw, 17px);
+  width: clamp(12px, 1.4vw, 18px);
+  height: clamp(12px, 1.4vw, 18px);
+}
+
+/* =========================================
+   SECTION SOCIAL MEDIA (Paleta Deep Crimson)
+   ========================================= */
+:root {
+  --deep-crimson-50: #FEE6EA;
+  --deep-crimson-100: #FECDD6;
+  --deep-crimson-200: #FD9BAD;
+  --deep-crimson-300: #FC6984;
+  --deep-crimson-400: #FB375B;
+  --deep-crimson-500: #FA0532;
+  --deep-crimson-600: #C80428;
+  --deep-crimson-700: #96031E;
+  --deep-crimson-800: #640214;
+  --deep-crimson-900: #32010A;
+  --deep-crimson-950: #230107;
+}
+
+/* =========================================
+   THEMES & COLOR MORPHING (Scroll Transition)
+   ========================================= */
+body {
+  transition: background-color 0.8s ease;
+  background-color: #101010; /* Fundo base inicial (Section About) */
+}
+
+body.theme-base {
+  background-color: #101010 !important;
+}
+
+body.theme-brown {
+  background-color: #1a0f0a !important; /* Tom marrom escuro elegante para a Section Copy */
+}
+
+body.theme-dark {
+  background-color: #230107 !important;
+}
+
+/* Container Principal */
+.section-socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(15px, 2.5vw, 36px) clamp(28px, 5vw, 69px);
+  gap: clamp(15px, 2.5vw, 36px);
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: transparent;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Subtítulo / Header */
+.section-socialmedia .subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 clamp(15px, 2.5vw, 36px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.section-socialmedia h1.text-wrapper {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: clamp(48px, 6.2vw, 89px);
+  line-height: clamp(65px, 8.4vw, 122px);
+  color: #F8F0ED;
+  margin: 0;
+  text-align: center;
+}
+
+/* Layout Principal (Esquerda e Direita) */
+.section-socialmedia .article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 29px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  /* Efeito Vidro Metálico transferido para o Container Principal */
+  box-sizing: border-box;
+  padding: clamp(15px, 2.5vw, 36px);
+  background: 
+    linear-gradient(235deg, rgba(50, 1, 10, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(23, 1, 5, 0.8), transparent 40%), 
+    rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
+  border-radius: clamp(12px, 2vw, 29px);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 2;
+}
+
+/* Borda Neon do Article Principal */
+.section-socialmedia .article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    var(--deep-crimson-100) 30%,
+    transparent 50%,
+    var(--deep-crimson-400) 70%,
+    transparent 90%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Glow Vazando do Article Principal */
+.section-socialmedia .article::after {
+  content: "";
+  position: absolute;
+  inset: clamp(-2px, -0.4vw, -5px);
+  border-radius: inherit;
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    rgba(254, 205, 214, 0.4) 30%,
+    transparent 50%,
+    rgba(251, 55, 91, 0.4) 70%,
+    transparent 90%
+  );
+  filter: blur(15px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-socialmedia .article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Coluna da Esquerda (Perfil) */
+.section-socialmedia .creator-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, 1vw, 14px);
+  flex: 1; /* Ocupa 1 terço do espaço matemático */
+  opacity: 0; /* Invisível antes da animação */
+}
+
+.section-socialmedia .creator-profile .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: clamp(3px, 0.5vw, 7px);
+}
+
+.section-socialmedia h2.creator-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3.8vw, 55px);
+  line-height: clamp(30px, 4.6vw, 67px);
+  color: var(--deep-crimson-50);
+  margin: 0;
+  text-align: center;
+}
+
+/* Container da Imagem e Elementos Absolutos */
+.section-socialmedia .image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: clamp(6px, 1vw, 14px); /* Apenas margem interna para respiro */
+}
+
+.section-socialmedia .creator-img {
+  width: 100%;
+  height: auto;
+  border-radius: clamp(6px, 1vw, 14px);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.section-socialmedia .amor-decorativo {
+  position: absolute;
+  width: clamp(50px, 6.5vw, 93px);
+  height: clamp(50px, 6.5vw, 93px);
+  left: -5%;
+  top: -5%;
+  z-index: 2;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+  transition: transform 0.4s ease-in-out;
+}
+
+.section-socialmedia .creator-profile:hover .amor-decorativo {
+  transform: translateY(-10px) rotate(-5deg); /* Efeito flutuar no hover */
+}
+
+/* Coluna da Direita (Conteúdo) */
+.section-socialmedia .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 2; /* Ocupa os 2 terços do espaço */
+  gap: clamp(12px, 2vw, 29px);
+}
+
+/* Grid Topo (O Projeto / Atuação) */
+.section-socialmedia .grid-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(12px, 2vw, 29px);
+  width: 100%;
+}
+
+.section-socialmedia .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(6px, 1vw, 14px);
+  flex: 1;
+}
+
+/* Títulos Internos (H3 com Ícone) */
+.section-socialmedia .section-title,
+.section-socialmedia .section-title-results {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(4px, 0.6vw, 10px);
+  width: 100%;
+  height: auto;
+  margin-bottom: clamp(3px, 0.5vw, 7px);
+  opacity: 0;
+}
+
+.section-socialmedia .section-title i,
+.section-socialmedia .section-title-results i {
+  font-size: clamp(16px, 2vw, 29px);
+  color: var(--deep-crimson-50);
+}
+
+.section-socialmedia .section-title h3,
+.section-socialmedia .section-title-results h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.4vw, 33px);
+  line-height: clamp(22px, 2.9vw, 41px);
+  color: var(--deep-crimson-50);
+  margin: 0;
+}
+
+/* Cards Escuros com Gradiente Vermelho/Vinho */
+.section-socialmedia .card,
+.section-socialmedia .result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(6px, 1vw, 14px);
+  gap: clamp(3px, 0.4vw, 6px);
+  width: 100%;
+  
+  background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%); /* Gradiente linear vibrante solicitado */
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(254, 230, 234, 0.1);
+  
+  border-top: 2px solid rgba(254, 230, 234, 0.2);
+  border-left: 1px solid rgba(254, 230, 234, 0.1);
+  border-right: 1px solid rgba(254, 230, 234, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  
+  border-radius: clamp(6px, 1vw, 14px);
+  box-sizing: border-box;
+  position: relative;
+  /* Removemos o 'background' da transição pois gradientes não animam no CSS base */
+  transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  isolation: isolate; /* Cria uma camada blindada para o nosso gradiente animado funcionar */
+  opacity: 0;
+}
+
+/* Camada invisível que guarda o gradiente mais claro para o Hover suave */
+.section-socialmedia .card::before,
+.section-socialmedia .result-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(223.39deg, #C80428 0%, #640214 100%); /* Brilho mais vibrante */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Transições de opacidade são 100% fluidas */
+  z-index: -1; /* Fica exatamente entre o fundo original e o texto do balão */
+  pointer-events: none;
+}
+
+/* Hover "Brilho" */
+.section-socialmedia .card:hover::before,
+.section-socialmedia .result-card:hover::before {
+  opacity: 1; /* Revela o gradiente claro com um fade suave */
+}
+
+.section-socialmedia .card:hover,
+.section-socialmedia .result-card:hover {
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(254, 230, 234, 0.4);
+  border-top: 2px solid rgba(254, 230, 234, 0.5);
+  border-left: 1px solid rgba(254, 230, 234, 0.3);
+  transform: translateY(-3px);
+}
+
+.section-socialmedia .card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(9px, 1vw, 14px);
+  line-height: clamp(11px, 1.2vw, 17px);
+  color: var(--deep-crimson-100);
+  margin: 0;
+}
+
+.section-socialmedia .card p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(7px, 0.7vw, 10px);
+  line-height: clamp(8px, 0.9vw, 12px);
+  color: #F8F0ED;
+  margin: 0;
+}
+
+/* Grid Base (Resultados) */
+.section-socialmedia .results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(6px, 1vw, 14px);
+  width: 100%;
+  
+  /* O container externo recebe o efeito grid-2 de fundo fosco */
+  padding: clamp(6px, 1vw, 14px);
+  background: rgba(35, 1, 7, 0.2);
+  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  border-radius: clamp(6px, 1vw, 14px);
+}
+
+.section-socialmedia .results-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: clamp(10px, 1.5vw, 22px);
+  width: 100%;
+}
+
+.section-socialmedia .result-card {
+  align-items: center; /* Centraliza o texto dos resultados */
+  padding: clamp(10px, 1.5vw, 22px);
+  flex: 1; /* Divisão perfeita entre os 3 */
+}
+
+.section-socialmedia .highlight-number {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 44px);
+  line-height: clamp(24px, 3.5vw, 54px);
+  text-align: center;
+  color: var(--deep-crimson-50);
+  margin: 0;
+}
+
+.section-socialmedia .highlight-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(7px, 0.7vw, 10px);
+  line-height: clamp(8px, 0.9vw, 12px);
+  text-align: center;
+  color: #F8F0ED;
+  margin: 0;
+}
+
+/* Botão Link Instagram flutuando próximo ao artigo */
+.section-socialmedia .link-instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Posição absoluta relativa ao .image-wrapper */
+  right: clamp(6px, 1vw, 14px); /* Alinha à direita, respeitando o padding do pai */
+  width: clamp(20px, 2.2vw, 32px);
+  height: clamp(20px, 2.2vw, 32px);
+  /* Empurra o botão para baixo compensando o padding menor, deixando a ~5px da imagem */
+  bottom: clamp(-25px, -1.8vw, -24px); 
+  background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
+  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px); /* Unificado com o Copy */
+  border-radius: clamp(28px, 4.8vw, 69px);
+  z-index: 5; /* Unificado com o Copy */
+  text-decoration: none;
+  color: #F8F0ED;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.section-socialmedia .link-instagram:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+.section-socialmedia .link-instagram i {
+  font-size: clamp(12px, 1.4vw, 18px); /* Mesmo tamanho exato da imagem de Copy */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
