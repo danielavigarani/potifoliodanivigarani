@@ -70,4 +70,50 @@ document.addEventListener('DOMContentLoaded', () => {
     
     expertiseObserver.observe(expertiseSection);
   }
+
+  // =========================================
+  // ANIMAÇÃO DA SEÇÃO PORTFÓLIO (FADE IN SEQUENCIAL)
+  // =========================================
+  const portfolioSection = document.querySelector('.section-portfolio');
+  if (portfolioSection) {
+    const portfolioFrames = portfolioSection.querySelectorAll('.frame');
+    
+    const portfolioObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: portfolioFrames,
+          opacity: [0, 1],
+          translateY: [20, 0],
+          delay: anime.stagger(100), // Efeito cascata
+          duration: 800,
+          easing: 'easeOutQuart',
+          complete: function(anim) {
+            anim.animatables.forEach(a => a.target.style.transform = ''); // Restaura hover
+          }
+        });
+        portfolioObserver.unobserve(portfolioSection);
+      }
+    }, { threshold: 0.15 });
+    
+    portfolioObserver.observe(portfolioSection);
+
+    // =========================================
+    // EFEITO MUDANÇA DE ESTAÇÃO (COLOR MORPHING)
+    // =========================================
+    const themeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Adiciona a classe ao body quando a seção do portfólio entra na tela
+          document.body.classList.add('theme-brown');
+        } else {
+          // Remove a classe quando a seção sai da tela (scroll para cima)
+          document.body.classList.remove('theme-brown');
+        }
+      });
+    }, {
+      threshold: 0.15 // Gatilho mais rápido: a cor muda quando 15% da seção entrar na tela
+    });
+
+    themeObserver.observe(portfolioSection);
+  }
 });

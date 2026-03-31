@@ -1,148 +1,75 @@
-/* Article Expertise */
+/* Section_Portfolio_Intro_Copywriting */
 
-box-sizing: border-box;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 50px 100px;
+gap: 50px;
+isolation: isolate;
+
+position: relative;
+width: 1920px;
+height: 1480px;
+
+background: #945438;
+
+
+/* Portifólio */
+
+width: 437px;
+height: 174px;
+
+font-family: 'Yellowtail';
+font-style: normal;
+font-weight: 400;
+font-size: 128px;
+line-height: 174px;
+
+color: #F8F0ED;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* subtitle */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
-justify-content: center;
 align-items: center;
-padding: 50px;
-gap: 40px;
+padding: 0px 50px;
+gap: 8px;
 
 width: 1720px;
-height: 802px;
-
-background: linear-gradient(180deg, #1A1A1A 0%, #666666 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 40px;
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-z-index: 4;
-
-
-/* Frame 2511 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 50px;
-gap: 22px;
-
-width: 790px;
-height: 702px;
+height: 117px;
 
 
 /* Inside auto layout */
 flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* title */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 690px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
+z-index: 1;
 
 
-/* <i class="fa-light fa-graduation-cap"></i> */
+/* Copy */
 
-width: 48px;
-height: 39px;
-
-background: #CCCCCC;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Formação */
-
-width: 210px;
-height: 49px;
+width: 253px;
+height: 117px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 40px;
-line-height: 49px;
+font-size: 96px;
+line-height: 117px;
 /* identical to box height */
-text-align: center;
 
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2518 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 690px;
-height: 89px;
-
-background: #4D4D4D;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Marketing */
-
-width: 107px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FFFFFF;
+color: #F8F0ED;
 
 
 /* Inside auto layout */
@@ -151,652 +78,63 @@ order: 0;
 flex-grow: 0;
 
 
-/* Universidade Paulista (UNIP) - 2022 a 2025 */
-
-width: 304px;
-height: 17px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-text-align: center;
-
-color: #B3B3B3;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2519 */
-
-box-sizing: border-box;
+/* article */
 
 /* Auto layout */
 display: flex;
-flex-direction: column;
-justify-content: center;
+flex-direction: row;
+justify-content: space-between;
 align-items: flex-start;
-padding: 20px;
-gap: 8px;
+padding: 0px;
 
-width: 690px;
-height: 89px;
+width: 1720px;
+height: 989px;
 
-background: #4D4D4D;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
 order: 2;
 align-self: stretch;
 flex-grow: 0;
+z-index: 2;
 
 
-/* Técnico em Desenvolvimento de Sistemas */
-
-width: 435px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Etec José Ignácio Azevedo Filho - 2019 a 2021 */
-
-width: 323px;
-height: 17px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-text-align: center;
-
-color: #B3B3B3;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* title */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 690px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* <i class="fa-duotone fa-solid fa-language"></i> */
-
-width: 50px;
-height: 44px;
-
-background: #CCCCCC;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Idiomas */
-
-width: 167px;
-height: 49px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 49px;
-/* identical to box height */
-text-align: center;
-
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2520 */
-
-box-sizing: border-box;
+/* teus-img */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 20px;
+padding: 50px 20px;
 gap: 8px;
 
-width: 690px;
-height: 60px;
+margin: 0 auto;
+width: 540px;
+height: 989px;
 
-background: #4D4D4D;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 541002392_18473833849077084_454137477132073766_n 1 */
+
+width: 500px;
+height: 889px;
+
+background: url(541002392_18473833849077084_454137477132073766_n.jpg);
 border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Português (Nativo) • Inglês (Intermediário) • Espanhol (Básico) */
-
-width: 509px;
-height: 20px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-text-align: center;
-
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
 order: 0;
 flex-grow: 0;
 
 
-/* title */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 690px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* <i class="fa-regular fa-screwdriver-wrench"></i> */
-
-width: 41.84px;
-height: 41.84px;
-
-background: #CCCCCC;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Ferramentas */
-
-width: 266px;
-height: 49px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 49px;
-/* identical to box height */
-text-align: center;
-
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2521 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 8px;
-
-width: 690px;
-height: 85px;
-
-background: #4D4D4D;
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2482 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 10px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Notion */
-
-width: 25px;
-height: 25px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 2.28%;
-right: 2.28%;
-top: 0.35%;
-bottom: 0.16%;
-
-background: #FFFFFF;
-
-
-/* Frame 2483 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 10px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Figma */
-
-width: 15px;
-height: 22px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* path0_fill */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 0%;
-right: 50.01%;
-top: 66.66%;
-bottom: 0%;
-
-background: #FFFFFF;
-border: 0.5px solid #000000;
-
-
-/* path1_fill */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 0%;
-right: 50.01%;
-top: 33.34%;
-bottom: 33.33%;
-
-background: #FFFFFF;
-border: 0.5px solid #000000;
-
-
-/* path1_fill_1_ */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 0%;
-right: 50.01%;
-top: 0%;
-bottom: 66.67%;
-
-background: #FFFFFF;
-border: 0.5px solid #000000;
-
-
-/* path2_fill */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 50%;
-right: 0.01%;
-top: 0%;
-bottom: 66.67%;
-
-background: #FFFFFF;
-border: 0.5px solid #000000;
-
-
-/* path3_fill */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 50%;
-right: 0.01%;
-top: 33.34%;
-bottom: 33.33%;
-
-background: #FFFFFF;
-border: 0.5px solid #000000;
-
-
-/* Frame 2484 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 10px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Ps */
-
-width: 25px;
-height: 18.7px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 22.22%;
-right: 48.69%;
-top: 29.23%;
-bottom: 30.03%;
-
-background: #FFFFFF;
-
-
-/* Vector */
-
-position: absolute;
-left: 55.43%;
-right: 22.22%;
-top: 38.77%;
-bottom: 29.22%;
-
-background: #FFFFFF;
-
-
-/* Frame 2485 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 10px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* meta */
-
-width: 25px;
-height: 25px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 45.64%;
-right: 6.25%;
-top: 21.88%;
-bottom: 21.88%;
-
-background: #FFFFFF;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.25%;
-right: 46.57%;
-top: 21.88%;
-bottom: 21.88%;
-
-background: #FFFFFF;
-
-
-/* Vector */
-
-position: absolute;
-left: 31.25%;
-right: 21.87%;
-top: 21.88%;
-bottom: 21.88%;
-
-background: #FFFFFF;
-
-
-/* Frame 2486 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px 20px 20px 18px;
-gap: 10px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Ai */
-
-width: 25px;
-height: 21.36px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 20%;
-right: 38.79%;
-top: 29.61%;
-bottom: 26.3%;
-
-background: #FFFFFF;
-
-
-/* Vector */
-
-position: absolute;
-left: 65.13%;
-right: 24.45%;
-top: 26.26%;
-bottom: 26.26%;
-
-background: #FFFFFF;
-
-
-/* Frame 2487 */
-
-box-sizing: border-box;
+/* divs */
 
 /* Auto layout */
 display: flex;
@@ -804,62 +142,57 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 0px;
-
-width: 45px;
-height: 45px;
-
-background: rgba(255, 255, 255, 0.02);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-flex-grow: 0;
-
-
-/* Premium Icons */
-
-width: 25px;
-height: 25px;
-
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.3);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 10%;
-right: 13.33%;
-top: 10%;
-bottom: 13.33%;
-
-background: #FFFFFF;
-
-
-/* Frame 2512 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 50px;
 gap: 20px;
 
-width: 790px;
-height: 694px;
+margin: 0 auto;
+width: 1180px;
+height: 973px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+flex-grow: 1;
+
+
+/* grid_1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 20px;
+
+width: 580px;
+height: 973px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* challenges */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 540px;
+height: 506px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -872,8 +205,8 @@ align-items: center;
 padding: 0px;
 gap: 15px;
 
-width: 690px;
-height: 49px;
+width: 540px;
+height: 59px;
 
 
 /* Inside auto layout */
@@ -883,12 +216,11 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* <i class="fa-solid fa-folder-user"></i> */
+/* <i class="ph ph-target"></i> */
 
-width: 48px;
-height: 39px;
+width: 40px;
+height: 40px;
 
-background: #CCCCCC;
 
 /* Inside auto layout */
 flex: none;
@@ -896,20 +228,33 @@ order: 0;
 flex-grow: 0;
 
 
-/* Expertise */
+/* Vector */
 
-width: 197px;
-height: 49px;
+position: absolute;
+left: 9.32%;
+right: 9.36%;
+top: 9.36%;
+bottom: 9.31%;
+
+background: #F1E1DA;
+
+
+/* Desafio */
+
+width: 190px;
+height: 59px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 40px;
-line-height: 49px;
+font-size: 48px;
+line-height: 59px;
 /* identical to box height */
+display: flex;
+align-items: center;
 text-align: center;
 
-color: #FFFFFF;
+color: #F1E1DA;
 
 
 /* Inside auto layout */
@@ -930,10 +275,10 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 690px;
-height: 89px;
+width: 540px;
+height: 106px;
 
-background: #4D4D4D;
+background: #25150E;
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -947,9 +292,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Growth & Dados */
+/* O Momento */
 
-width: 168px;
+width: 123px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -959,7 +304,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #FFFFFF;
+color: #E3C3B5;
 
 
 /* Inside auto layout */
@@ -968,25 +313,24 @@ order: 0;
 flex-grow: 0;
 
 
-/* Estratégia orientada a métricas, tráfego pago e testes de performance. */
+/* Contagem regressiva para o aguardado lançamento de Hollow Knight: Silksong. */
 
-width: 509px;
-height: 17px;
+width: 500px;
+height: 34px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 17px;
-/* identical to box height */
-text-align: center;
 
-color: #B3B3B3;
+color: #7D736E;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -1002,10 +346,10 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 690px;
+width: 540px;
 height: 89px;
 
-background: #4D4D4D;
+background: #25150E;
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -1019,9 +363,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* UX/UI & CRO */
+/* O Formato */
 
-width: 131px;
+width: 111px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -1031,7 +375,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #FFFFFF;
+color: #E3C3B5;
 
 
 /* Inside auto layout */
@@ -1040,9 +384,9 @@ order: 0;
 flex-grow: 0;
 
 
-/* Mapeamento de usabilidade e otimização contínua da taxa de conversão. */
+/* Vídeo curto de retenção rápida. */
 
-width: 530px;
+width: 500px;
 height: 17px;
 
 font-family: 'Montserrat';
@@ -1051,14 +395,14 @@ font-weight: 600;
 font-size: 14px;
 line-height: 17px;
 /* identical to box height */
-text-align: center;
 
-color: #B3B3B3;
+color: #7D736E;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -1074,10 +418,10 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 690px;
-height: 89px;
+width: 540px;
+height: 106px;
 
-background: #4D4D4D;
+background: #25150E;
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -1091,9 +435,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Copy & Conteúdo */
+/* O Público-Alvo */
 
-width: 179px;
+width: 153px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -1103,7 +447,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #FFFFFF;
+color: #E3C3B5;
 
 
 /* Inside auto layout */
@@ -1112,25 +456,24 @@ order: 0;
 flex-grow: 0;
 
 
-/* Narrativas persuasivas e calendário editorial focado em engajamento real. */
+/* Fãs do jogo + Novatos curiosos surfando no hype. */
 
-width: 533px;
-height: 17px;
+width: 500px;
+height: 34px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 17px;
-/* identical to box height */
-text-align: center;
 
-color: #B3B3B3;
+color: #7D736E;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -1146,10 +489,10 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 690px;
-height: 89px;
+width: 540px;
+height: 106px;
 
-background: #4D4D4D;
+background: #25150E;
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -1163,9 +506,9 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Gestão Ágil (Ops) */
+/* A Missão */
 
-width: 178px;
+width: 92px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -1175,7 +518,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #FFFFFF;
+color: #E3C3B5;
 
 
 /* Inside auto layout */
@@ -1184,20 +527,106 @@ order: 0;
 flex-grow: 0;
 
 
-/* Orquestração de fluxos de trabalho, processos e alinhamento de equipes. */
+/* Prender a atenção no primeiro segundo e engatilhar o compartilhamento orgânico. */
 
-width: 528px;
-height: 17px;
+width: 500px;
+height: 34px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 17px;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* strategy */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 540px;
+height: 407px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 540px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* <i class="ph ph-strategy"></i> */
+
+width: 40px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 15.62%;
+right: 9.37%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #F1E1DA;
+
+
+/* A Estratégia */
+
+width: 306px;
+height: 59px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
 /* identical to box height */
+display: flex;
+align-items: center;
 text-align: center;
 
-color: #B3B3B3;
+color: #F1E1DA;
 
 
 /* Inside auto layout */
@@ -1218,10 +647,10 @@ align-items: flex-start;
 padding: 20px;
 gap: 8px;
 
-width: 690px;
-height: 89px;
+width: 540px;
+height: 106px;
 
-background: #4D4D4D;
+background: #25150E;
 /* Glass */
 box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(5px);
@@ -1230,14 +659,14 @@ border-radius: 20px;
 
 /* Inside auto layout */
 flex: none;
-order: 5;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Community Management */
+/* O "Hook" Nostálgico */
 
-width: 267px;
+width: 209px;
 height: 24px;
 
 font-family: 'Montserrat';
@@ -1247,7 +676,7 @@ font-size: 20px;
 line-height: 24px;
 text-align: center;
 
-color: #FFFFFF;
+color: #E3C3B5;
 
 
 /* Inside auto layout */
@@ -1256,9 +685,314 @@ order: 0;
 flex-grow: 0;
 
 
-/* Moderação multicanal, construção de audiência e relacionamento estratégico B2B. */
+/* Abri o texto citando Hallownest (reino do primeiro jogo) para criar cumplicidade imediata com os veteranos e curiosidade nos novatos. */
 
-width: 598px;
+width: 500px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2523 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 540px;
+height: 106px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* SEO Integrado */
+
+width: 150px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #E3C3B5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Injeção natural de palavras-chave de alto volume para o algoritmo. (Silksong, Hollow Knight, resumão, completo, lançamento). */
+
+width: 500px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2524 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 540px;
+height: 106px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Engenharia de Engajamento */
+
+width: 296px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #E3C3B5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Um Call to Action focado 100% na métrica de compartilhamento ("Manda este vídeo para aquele amigo"). */
+
+width: 500px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* grid_2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 20px;
+gap: 66px;
+
+width: 580px;
+height: 973px;
+
+background: rgba(37, 21, 14, 0.2);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* client */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+margin: 0 auto;
+width: 540px;
+height: 373px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 540px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Teus Belizário */
+
+width: 348px;
+height: 59px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F1E1DA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 2518 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 345px;
+height: 89px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* O Cliente */
+
+width: 95px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #E3C3B5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Criador de conteúdo de Games & Lifestyle. */
+
+width: 305px;
 height: 17px;
 
 font-family: 'Montserrat';
@@ -1269,10 +1003,373 @@ line-height: 17px;
 /* identical to box height */
 text-align: center;
 
-color: #B3B3B3;
+color: #7D736E;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+flex-grow: 0;
+
+
+/* Frame 2519 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 437px;
+height: 89px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* O Padrão */
+
+width: 96px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #E3C3B5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vídeos com edição impecável e comunidade engajada. */
+
+width: 397px;
+height: 17px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2520 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+gap: 8px;
+
+width: 540px;
+height: 106px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* O Objetivo */
+
+width: 110px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #E3C3B5;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Entregar uma copy que acompanhasse essa qualidade visual, mantendo a autenticidade de "fã para fã" */
+
+width: 500px;
+height: 34px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+
+color: #7D736E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* final_delivery */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+margin: 0 auto;
+width: 540px;
+height: 544px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+width: 540px;
+height: 59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 40px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 9.37%;
+top: 25%;
+bottom: 18.75%;
+
+background: #F1E1DA;
+
+
+/* Entrega Final */
+
+width: 336px;
+height: 59px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F1E1DA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 2521 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 8px;
+
+width: 540px;
+height: 475px;
+
+background: #25150E;
+/* Glass */
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* “Quer jogar Silksong, mas nunca pisou em Hallownest?  Silksong está chegando e a gente sabe que a ansiedade é real! Mas para você não ficar perdido na história, preparei um resumão completo com TUDO o que você precisa saber sobre a jornada do Cavaleiro em Hollow Knight.  Manda este vídeo para aquele amigo que está contando os dias para o lançamento, mas que pulou o primeiro jogo!”  */
+
+width: 500px;
+height: 435px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #F8F0ED;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* eevee-decorative */
+
+position: absolute;
+width: 258px;
+height: 258px;
+left: 1651px;
+top: 348px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* silksong-decorative */
+
+position: absolute;
+width: 400px;
+height: 278px;
+left: 28px;
+top: 1211px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+
+
+/* link https://www.instagram.com/p/DOEu2OHEd35/ */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+
+position: absolute;
+width: 45px;
+height: 45px;
+left: 575px;
+top: 1390px;
+
+background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
+box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+z-index: 5;
+
+
+/* Vector */
+
+width: 26px;
+height: 26px;
+
+background: #F8F0ED;
+box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;

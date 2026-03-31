@@ -246,6 +246,114 @@
   </article>
   </section>
 
+  <section class="section-portfolio" aria-label="Portfólio de Copy">
+  
+  <h1 class="text-wrapper">Portifólio</h1>
+  
+  <header class="subtitle">
+    <h2 class="div">Copy</h2>
+  </header>
+  
+  <article class="article">
+    
+    <figure class="teus-img">
+      <img src="img/copy/teus-image.jpg" alt="Teus Belizário - Criador de conteúdo de Games e Lifestyle" />
+      <a class="link-instagram" target="_blank" href="https://www.instagram.com/p/DOEu2OHEd35/" aria-label="Link externo do Instagram">
+        <img src="img/copy/instagram-logo.svg" alt="Instagram Logo" />
+      </a>
+    </figure>
+    
+    <div class="divs">
+      <div class="grid">
+        
+        <div class="div-2">
+          <div class="title">
+            <i class="ph ph-target"></i>
+            <h3 class="text-wrapper-2">Desafio</h3>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Momento</h4>
+            <p class="p">Contagem regressiva para o aguardado lançamento de Hollow Knight: Silksong.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Formato</h4>
+            <p class="p">Vídeo curto de retenção rápida.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Público-Alvo</h4>
+            <p class="p">Fãs do jogo +<br />Novatos curiosos surfando no hype.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">A Missão</h4>
+            <p class="p">Prender a atenção no primeiro segundo e engatilhar o compartilhamento orgânico.</p>
+          </div>
+        </div>
+        
+        <div class="div-2">
+          <div class="title">
+            <i class="ph ph-strategy"></i>
+            <h3 class="text-wrapper-2">A Estratégia</h3>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O "Hook" Nostálgico</h4>
+            <p class="p">Abri o texto citando Hallownest (reino do primeiro jogo) para criar cumplicidade imediata com os veteranos e curiosidade nos novatos.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">SEO Integrado</h4>
+            <p class="p">Injeção natural de palavras-chave de alto volume para o algoritmo.<br />(Silksong, Hollow Knight, resumão, completo, lançamento).</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">Engenharia de Engajamento</h4>
+            <p class="p">Um Call to Action focado 100% na métrica de compartilhamento<br />("Manda este vídeo para aquele amigo").</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-2">
+        <div class="div-2">
+          <div class="title">
+            <h3 class="text-wrapper-2">Teus Belizário</h3>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Cliente</h4>
+            <p class="p">Criador de conteúdo de Games & Lifestyle.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Padrão</h4>
+            <p class="p">Vídeos com edição impecável e comunidade engajada.</p>
+          </div>
+          <div class="frame">
+            <h4 class="text-wrapper-3">O Objetivo</h4>
+            <p class="p">Entregar uma copy que acompanhasse essa qualidade visual, mantendo a autenticidade de "fã para fã"</p>
+          </div>
+        </div>
+        
+        <div class="div-2">
+          <div class="title">
+            <i class="ph ph-check"></i>
+            <h3 class="text-wrapper-2">Entrega Final</h3>
+          </div>
+          <div class="frame entrega-final">
+            <blockquote class="quer-jogar-silksong-wrapper">
+              <p class="quer-jogar-silksong">
+                "Quer jogar Silksong, mas nunca pisou em Hallownest?<br /><br />Silksong está chegando e a gente sabe que a ansiedade é real! Mas para você não ficar perdido na história, preparei um resumão completo com TUDO o que você precisa saber sobre a jornada do Cavaleiro em Hollow Knight.<br /><br />Manda este vídeo para aquele amigo que está contando os dias para o lançamento, mas que pulou o primeiro jogo!"
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <img class="eevee-decorative" src="img/copy/eevee-decorative.png" alt="Eevee decorativo" aria-hidden="true" />
+  <img class="silksong-decorative" src="img/copy/silksong-decorative.png" alt="Silksong decorativo" aria-hidden="true" />
+</section>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script type="module" src="js/liquid-metal.js"></script>
     <script type="module" src="js/glitch-effect.js"></script>
     <script src="js/custom-cursor.js"></script>
@@ -286,6 +394,18 @@
         }, { threshold: 0.25 }); // Dispara quando 25% da timeline estiver visível na tela
         
         document.querySelectorAll(".timeline-wrapper").forEach(wrapper => observer.observe(wrapper));
+
+        // =========================================
+        // LÓGICA DO BOTÃO VOLTAR AO TOPO
+        // =========================================
+        const backToTopBtn = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+          // Adiciona a classe 'visible' se a rolagem for maior que 600px
+          backToTopBtn.classList.toggle("visible", window.scrollY > 600);
+        });
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
       });
     </script>
   </body>

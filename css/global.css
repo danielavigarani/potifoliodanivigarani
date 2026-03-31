@@ -12,6 +12,17 @@
   --onyx-800: #333333;
   --onyx-900: #1A1A1A;
   --onyx-950: #121212;
+  --cinnamon-wood-50: #F8F0ED;
+  --cinnamon-wood-100: #F1E1DA;
+  --cinnamon-wood-200: #E3C3B5;
+  --cinnamon-wood-300: #D5A590;
+  --cinnamon-wood-400: #C7876B;
+  --cinnamon-wood-500: #B96946;
+  --cinnamon-wood-600: #945438;
+  --cinnamon-wood-700: #6F3F2A;
+  --cinnamon-wood-800: #4A2A1C;
+  --cinnamon-wood-900: #25150E;
+  --cinnamon-wood-950: #1A0F0A;
 }
 
 * {
@@ -27,6 +38,16 @@ body {
   /* Esconde o scrollbar nativo mas permite rolar via mousewheel/drag */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE e Edge */
+}
+
+body {
+  /* Cor de fundo inicial isolada no body para que a cor preencha todo o scroll da página */
+  background-color: #101010;
+  transition: background-color 1.5s ease-in-out;
+}
+
+body.theme-brown {
+  background-color: var(--cinnamon-wood-600); /* #945438 */
 }
 
 /* Chrome, Safari e Edge Chromium */
@@ -109,4 +130,43 @@ a {
   border-color: transparent;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+   ========================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none; /* Não clicável quando invisível */
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: all; /* Torna clicável quando visível */
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
 }
