@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================
   const portfolioSection = document.querySelector('.section-portfolio');
   if (portfolioSection) {
-    const portfolioFrames = portfolioSection.querySelectorAll('.frame');
+    // Seleciona os títulos (que contêm o h3) e todos os cards para a animação sequencial
+    const portfolioFrames = portfolioSection.querySelectorAll('.title, .frame, .frame-2');
     
     const portfolioObserver = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {

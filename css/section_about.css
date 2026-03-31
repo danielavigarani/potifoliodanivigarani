@@ -7,48 +7,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 75px 120px 75px; /* Aumenta o padding final (espaço interno inferior) */
-  gap: 38px;
+  padding: clamp(15px, 2.5vw, 36px) clamp(28px, 5vw, 69px) clamp(45px, 7.8vw, 112px);
+  gap: clamp(15px, 2.5vw, 36px);
   position: relative;
   width: 100%;
-  max-width: 1920px; /* Boa prática: impede que quebre layouts menores */
+  max-width: 1440px; /* Boa prática: impede que quebre layouts menores */
   background: transparent;
   overflow-x: hidden; /* Permite que sombras verticais vazem, mas esconde overflow horizontal */
-  margin-bottom: 30px; /* Reduz a margem externa já que o padding foi aumentado */
+  margin: 0 auto clamp(12px, 2vw, 29px); /* Centraliza a seção e mantém a margem inferior dinâmica */
 }
 
 /* Letras de Fundo (Decorativas) */
 .aa-decorative {
   position: absolute;
-  width: 249px;
-  height: 220px;
-  left: -45px;
-  top: -77px;
+  width: clamp(94px, 16.1vw, 232px);
+  height: clamp(83px, 14.3vw, 205px);
+  left: clamp(-17px, -3vw, -42px);
+  top: clamp(-29px, -5vw, -72px);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 180px;
-  line-height: 220px;
+  font-size: clamp(68px, 11.7vw, 167px);
+  line-height: clamp(83px, 14.3vw, 205px);
   color: #FFFFFF;
   opacity: 0.05;
-  filter: blur(4px);
+  filter: blur(3px);
   transform: rotate(-22.98deg);
   z-index: 0;
 }
 
 .decorative {
   position: absolute;
-  width: 164px;
-  height: 275px;
+  width: clamp(62px, 10.5vw, 153px);
+  height: clamp(103px, 17.7vw, 255px);
   /* Convertido de left: 1648px para 'right' para se ajustar melhor a qualquer tela */
-  right: 38px; 
-  top: 430px;
+  right: clamp(15px, 2.5vw, 36px); 
+  top: clamp(162px, 27.8vw, 401px);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 225px;
-  line-height: 275px;
+  font-size: clamp(85px, 14.5vw, 210px);
+  line-height: clamp(103px, 17.7vw, 255px);
   color: #FFFFFF;
   opacity: 0.05;
-  filter: blur(4px);
+  filter: blur(3px);
   transform: rotate(8deg);
   z-index: 1;
 }
@@ -62,19 +62,18 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 38px;
-  gap: 6px;
-  width: 1290px;
-  height: 600px;
-  max-width: 100%;
+  padding: clamp(15px, 2.5vw, 36px);
+  gap: clamp(3px, 0.4vw, 6px);
+  width: 100%;
+  max-width: 1200px;
   background: 
     linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
     linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
     rgba(18, 18, 18, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
+  border-radius: clamp(12px, 2vw, 29px);
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   z-index: 2;
@@ -90,28 +89,28 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 6px;
-  gap: 15px;
-  width: 1050px;
+  padding: clamp(3px, 0.4vw, 6px);
+  gap: clamp(6px, 1vw, 14px);
+  width: 100%;
   max-width: 100%;
-  height: 525px;
+  height: auto;
   margin: 0 auto; /* Aplica a margem para centralizar o bloco de conteúdo dentro da coluna */
 }
 
 .text-wrapper {
   font-family: 'Yellowtail', cursive;
   font-weight: 400;
-  font-size: 72px;
-  line-height: 98px;
+  font-size: clamp(32px, 5vw, 67px);
+  line-height: clamp(44px, 6.4vw, 92px);
   color: #FFFFFF;
-  margin: 0 0 15px 0; /* 20px de margin + 30px de gap = 50px de distância para o primeiro parágrafo */
+  margin-bottom: clamp(6px, 1vw, 14px);
 }
 
 .about-text-block {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: clamp(12px, 1.5vw, 17px);
+  line-height: clamp(15px, 1.9vw, 21px);
   color: #F2F2F2;
   margin: 0;
 }
@@ -126,15 +125,15 @@
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  gap: 11px;
+  gap: clamp(4px, 0.6vw, 10px);
   margin: 0 auto;
-  width: 147px;
-  height: 525px;
+  width: clamp(55px, 9.4vw, 136px);
+  height: auto;
 }
 
 .decorative-cat {
-  width: 147px;
-  height: 147px;
+  width: clamp(55px, 9.4vw, 136px);
+  height: clamp(55px, 9.4vw, 136px);
   object-fit: contain;
 }
 
@@ -145,12 +144,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch; /* Faz os cards esticarem e ficarem com a mesma altura */
   padding: 0px;
-  gap: 53px;
-  width: 1290px;
-  height: 825px;
-  max-width: 100%;
+  gap: clamp(20px, 3.5vw, 50px);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
   isolation: isolate;
   z-index: 3;
 }
@@ -160,24 +159,25 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Mantém os cabeçalhos alinhados no topo independente da altura */
   align-items: center;
-  padding: 38px;
-  gap: 23px;
-  width: 619px;
-  height: 825px;
-  max-width: 100%;
+  padding: clamp(15px, 2.5vw, 36px);
+  gap: clamp(9px, 1.5vw, 21px);
+  width: 100%;
+  height: auto;
+  min-height: clamp(464px, 53.3vw, 768px); /* Devolvendo a altura mínima fluida */
+  flex: 1; /* Faz os cards dividirem o espaço disponível por igual */
   
   /* 1. O CORPO DO CARTÃO (Vidro Onyx) */
   background: 
     linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
     linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
     rgba(18, 18, 18, 0.7); /* Mistura das cores onyx-800, onyx-900, onyx-950 */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
   
-  border-radius: 30px;
+  border-radius: clamp(12px, 2vw, 29px);
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -219,7 +219,7 @@
 .article-expertise::after {
   content: "";
   position: absolute;
-  inset: -5px; /* Vaza 5px pra fora do cartão */
+  inset: -4px; /* Vaza 5px pra fora do cartão */
   border-radius: inherit;
   
   /* Mesmo gradiente da borda, convertido para RGBA para suportar transparência baseada no onyx 100 e 400 */
@@ -232,17 +232,21 @@
     transparent 90%
   );
   
-  filter: blur(20px);
+  filter: blur(15px);
   z-index: -1; /* Joga para trás do cartão */
   pointer-events: none;
 }
 
 /* Efeito Hover nos Cards Grandes (Learning/Professional Path) */
 .timeline-card:hover,
-.article-about-me:hover,
 .article-expertise:hover {
   transform: translateY(-6px);
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6); /* Sombra difusa e profunda ao flutuar */
+}
+
+.article-about-me:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
 }
 
 .card-header-title {
@@ -251,14 +255,15 @@
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 11px;
-  width: 495px;
-  height: 44px;
+  gap: clamp(4px, 0.6vw, 10px);
+  width: 100%;
+  max-width: 460px;
+  height: auto;
 }
 
 .card-header-title i {
-  width: 36px;
-  height: 36px;
+  width: clamp(18px, 2.7vw, 33px);
+  height: clamp(18px, 2.7vw, 33px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,8 +272,8 @@
 .card-header-title h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(18px, 2.3vw, 33px);
+  line-height: clamp(22px, 2.9vw, 41px);
   color: #FFFFFF;
   margin: 0;
   text-align: center;
@@ -277,19 +282,21 @@
 }
 
 .professional-path-card .card-header-title h2 {
-  font-size: 30px;
-  line-height: 37px;
-  width: 445px;
+  font-size: clamp(16px, 2vw, 29px);
+  line-height: clamp(20px, 2.4vw, 35px);
+  max-width: 414px;
 }
 
 .timeline-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 6px 0px;
-  gap: 15px;
-  width: 544px;
-  height: 683px;
+  padding: clamp(3px, 0.4vw, 6px) 0px;
+  gap: clamp(6px, 1vw, 14px);
+  width: 100%;
+  max-width: 506px;
+  height: auto;
+  flex: 1; /* Permite que o miolo cresça e puxe a linha branca até o final do card */
   max-width: 100%;
   position: relative;
   isolation: isolate;
@@ -307,7 +314,7 @@
   width: 2px;
   /* Gradient para criar o Fade In e Fade Out nas pontas da linha */
   background: linear-gradient(to bottom, rgba(242, 242, 242, 0) 0%, #F2F2F2 15%, #F2F2F2 85%, rgba(242, 242, 242, 0) 100%);
-  top: 55px;
+  top: clamp(20px, 3.5vw, 51px);
   z-index: 0;
   transform-origin: top;
   transform: scaleY(0); /* Linha começa "encolhida" no topo */
@@ -319,13 +326,13 @@
 }
 
 .learning-path-card .timeline-wrapper::before {
-  left: 77px;
-  height: 563px;
+  left: clamp(29px, 5vw, 72px);
+  height: 100%; /* Let it fill the container */
 }
 
 .professional-path-card .timeline-wrapper::before {
-  left: 86px;
-  height: 413px;
+  left: clamp(33px, 5.6vw, 81px);
+  height: 100%;
 }
 
 /* Badges dos Anos (2024 - 2026) */
@@ -335,36 +342,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px 15px;
-  gap: 6px;
+  padding: clamp(3px, 0.5vw, 7px) clamp(6px, 1vw, 14px);
+  gap: clamp(3px, 0.4vw, 6px);
   width: fit-content;
-  min-width: 143px;
-  height: 38px;
+  min-width: clamp(75px, 9.2vw, 133px);
+  height: clamp(20px, 2.5vw, 36px);
   
   /* Efeito de Vidro Metálico Elegante (Copiado dos balões) */
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
   border-top: 2px solid rgba(225, 225, 225, 0.2);
   border-left: 1px solid rgba(225, 225, 225, 0.1);
   border-right: 1px solid rgba(225, 225, 225, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 38px;
+  border-radius: clamp(15px, 2.5vw, 36px);
   z-index: 1;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease; /* Evita 'all' para não conflitar com anime.js */
   opacity: 0; /* Invisível antes da animação sequencial */
+  transform: translateX(-50%); /* Centraliza o badge na linha da timeline */
+}
+
+.learning-path-card .timeline-badge-container {
+  margin-left: clamp(29px, 5vw, 72px);
 }
 
 .professional-path-card .timeline-badge-container {
-  min-width: 173px;
+  margin-left: clamp(33px, 5.6vw, 81px);
+}
+
+.professional-path-card .timeline-badge-container {
+  min-width: clamp(90px, 11vw, 161px);
 }
 
 .timeline-badge {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: clamp(11px, 1.2vw, 17px);
+  line-height: clamp(14px, 1.5vw, 21px);
   text-align: center;
   color: #F2F2F2;
 }
@@ -373,19 +389,19 @@
 .timeline-section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: clamp(8px, 0.7vw, 11px);
+  line-height: clamp(9px, 1vw, 14px);
   color: #FFFFFF;
   z-index: 1;
   opacity: 0; /* Invisível antes da animação sequencial */
 }
 
 .learning-path-card .timeline-section-title {
-  margin: 0 0 0 107px;
+  margin: 0 0 0 clamp(41px, 6.9vw, 102px);
 }
 
 .professional-path-card .timeline-section-title {
-  margin: 0 0 0 116px;
+  margin: 0 0 0 clamp(45px, 7.6vw, 110px);
 }
 
 /* =========================================
@@ -397,14 +413,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 8px 15px;
-  gap: 6px;
+  padding: clamp(3px, 0.5vw, 7px) clamp(6px, 1vw, 14px);
+  gap: clamp(3px, 0.4vw, 6px);
   width: auto;
   
   /* Efeito de Vidro Metálico Elegante */
   background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(9px); /* Desfoque do vidro fosco */
-  -webkit-backdrop-filter: blur(9px); /* Suporte para navegadores Apple */
+  backdrop-filter: blur(7px); /* Desfoque do vidro fosco */
+  -webkit-backdrop-filter: blur(7px); /* Suporte para navegadores Apple */
   /* Mistura das sombras: Externa (do snippet) + Interna (seu design) */
   box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
   
@@ -413,7 +429,7 @@
   border-left: 1px solid rgba(225, 225, 225, 0.1);
   border-right: 1px solid rgba(225, 225, 225, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  border-radius: clamp(6px, 1vw, 14px);
   position: relative;
   z-index: 1;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
@@ -427,23 +443,30 @@
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(255, 255, 255, 0.4); /* Reforça o brilho interno do vidro */
   border-top: 2px solid rgba(255, 255, 255, 0.5); /* A borda superior reflete mais intensamente */
   border-left: 1px solid rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px); /* Levanta o elemento suavemente em direção ao usuário */
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+}
+
+.timeline-badge-container:hover {
+  transform: translateX(-50%) translateY(-3px);
 }
 
 .learning-path-card .timeline-item {
-  margin-left: 107px;
+  margin-left: clamp(41px, 6.9vw, 102px);
 }
 
 .professional-path-card .timeline-item {
-  margin-left: 116px;
+  margin-left: clamp(45px, 7.6vw, 110px);
 }
 
 /* Tipografia dos Cursos/Trabalhos */
 .timeline-item h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: clamp(12px, 1.2vw, 19px);
+  line-height: clamp(14px, 1.5vw, 22px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -451,25 +474,25 @@
 .timeline-item span {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: clamp(10px, 1vw, 15px);
+  line-height: clamp(12px, 1.2vw, 17px);
   color: #B3B3B3;
 }
 
 .timeline-item time {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 9px;
-  line-height: 11px;
+  font-size: clamp(8px, 0.7vw, 12px);
+  line-height: clamp(10px, 1vw, 15px);
   color: #808080;
 }
 
 /* Marcadores ao lado de cada item */
 .timeline-item .marker {
   position: absolute;
-  width: 15px;
-  height: 15px;
-  left: -38px;
+  width: clamp(6px, 1vw, 14px);
+  height: clamp(6px, 1vw, 14px);
+  left: clamp(-18px, -3vw, -38px);
   top: 50%;
   transform: translateY(-50%);
   background: #F2F2F2;
@@ -482,7 +505,7 @@
   /* Incorpora a elipse brilhante do cérebro diretamente no background!
      Isso evita o uso de pseudo-elementos, permitindo que a borda neon do .timeline-card funcione perfeitamente aqui também. */
   background: 
-    radial-gradient(circle at 50% calc(100% - 100px), rgba(153, 153, 153, 0.25) 0%, transparent 35%),
+    radial-gradient(circle at 50% calc(100% - 75px), rgba(153, 153, 153, 0.25) 0%, transparent 35%),
     linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
     linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
     rgba(18, 18, 18, 0.7);
@@ -491,11 +514,11 @@
 /* Efeito decorativo final (Brain Icon) */
 .professional-path-card .deco-final {
   display: block; /* Garante que não herde inline-flex */
-  margin-top: -8px; /* O card pai tem um gap de 30px. -10px de margem = ~20px de distância do último balão */
+  margin-top: clamp(-3px, -0.5vw, -7px);
   
   /* Dimensões do Figma */
-  width: 189px; 
-  height: 189px;
+  width: clamp(71px, 12vw, 176px); 
+  height: clamp(71px, 12vw, 176px);
   object-fit: contain;
   
   /* Garante que fique acima do fundo cinza mas abaixo da borda externa se houver */
@@ -527,18 +550,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 38px;
-  gap: 30px;
-  width: 1290px;
-  max-width: 100%;
+  padding: clamp(15px, 2.5vw, 36px);
+  gap: clamp(12px, 2vw, 29px);
+  width: 100%;
+  max-width: 1200px; /* Mantém a largura igual a todas as outras sections principais */
   background: 
     linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
     linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
     rgba(18, 18, 18, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
+  border-radius: clamp(12px, 1.6vw, 23px);
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   z-index: 4;
@@ -549,10 +572,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px;
-  gap: 17px;
-  width: 593px;
-  max-width: 100%;
+  padding: clamp(15px, 2.5vw, 36px);
+  gap: clamp(7px, 1.1vw, 16px);
+  width: 100%;
+  flex: 1; /* Faz as duas colunas de expertise dividirem o espaço igualmente */
 }
 
 /* Headers de Seção */
@@ -561,27 +584,27 @@
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 11px;
+  gap: clamp(4px, 0.6vw, 10px);
   width: 100%;
-  height: 37px;
+  height: auto;
   opacity: 0; /* Invisível antes da animação sequencial */
 }
 
 .expertise-title i {
-  font-size: 27px;
+  font-size: 20px;
   color: #CCCCCC;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: clamp(18px, 2.4vw, 33px);
+  height: clamp(18px, 2.4vw, 33px);
 }
 
 .expertise-title h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: clamp(16px, 2vw, 29px);
+  line-height: clamp(20px, 2.4vw, 35px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -593,15 +616,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 15px;
-  gap: 6px;
+  padding: clamp(6px, 1vw, 14px);
+  gap: clamp(3px, 0.4vw, 6px);
   width: 100%;
-  min-height: 67px;
+  min-height: clamp(35px, 4.3vw, 62px);
   
   /* Efeito de Vidro Metálico Elegante */
   background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(9px); /* Desfoque do vidro fosco */
-  -webkit-backdrop-filter: blur(9px); /* Suporte para navegadores Apple */
+  backdrop-filter: blur(7px); /* Desfoque do vidro fosco */
+  -webkit-backdrop-filter: blur(7px); /* Suporte para navegadores Apple */
   box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
   
   /* Bordas simulando o reflexo da luz no vidro/metal */
@@ -609,7 +632,7 @@
   border-left: 1px solid rgba(225, 225, 225, 0.1);
   border-right: 1px solid rgba(225, 225, 225, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  border-radius: clamp(6px, 1vw, 14px);
   position: relative;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
   opacity: 0; /* Invisível antes da animação sequencial */
@@ -626,8 +649,8 @@
 .expertise-card h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: clamp(9px, 1vw, 14px);
+  line-height: clamp(11px, 1.2vw, 17px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -635,8 +658,8 @@
 .expertise-card p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: clamp(7px, 0.7vw, 10px);
+  line-height: clamp(8px, 0.9vw, 12px);
   color: #B3B3B3; /* var(--onyx-300) */
   margin: 0;
 }
@@ -644,12 +667,12 @@
 /* Modificador do Cartão de Idiomas */
 .languages-card {
   align-items: center;
-  min-height: 45px;
+  min-height: clamp(24px, 3vw, 42px);
 }
 
 .languages-card p {
-  font-size: 12px;
-  line-height: 15px;
+  font-size: clamp(8px, 0.7vw, 11px);
+  line-height: clamp(9px, 1vw, 14px);
   color: #FFFFFF;
 }
 
@@ -662,8 +685,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 64px;
-  gap: 12px;
+  min-height: clamp(34px, 4vw, 60px);
+  gap: clamp(5px, 0.7vw, 11px);
 }
 
 .tool-icon {
@@ -672,18 +695,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px;
-  width: 34px;
-  height: 34px;
+  padding: clamp(3px, 0.5vw, 7px);
+  width: clamp(18px, 2.2vw, 32px);
+  height: clamp(18px, 2.2vw, 32px);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px);
-  border-radius: 75px;
+  backdrop-filter: blur(3px);
+  border-radius: clamp(28px, 4.8vw, 69px);
 }
 
 .tool-icon img {
-  width: 19px;
-  height: 19px;
+  width: clamp(10px, 1.2vw, 17px);
+  height: clamp(10px, 1.2vw, 17px);
   object-fit: contain;
   filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.3));
 }
@@ -693,8 +716,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 75px;
-  gap: 38px;
+  padding: clamp(15px, 2.5vw, 36px) clamp(28px, 5vw, 69px);
+  gap: clamp(15px, 2.5vw, 36px);
   position: relative;
   width: 100%;
   background: transparent;
@@ -706,12 +729,12 @@
 .section-portfolio h1.text-wrapper {
   font-family: 'Yellowtail', cursive;
   font-weight: 400;
-  font-size: 96px;
-  line-height: 131px;
+  font-size: clamp(48px, 6.2vw, 89px);
+  line-height: clamp(65px, 8.4vw, 122px);
   color: #F8F0ED;
   margin: 0 auto; /* Centraliza o título principal */
   width: 100%;
-  max-width: 1290px; /* Alinha com o resto do conteúdo */
+  max-width: 1200px;
   text-align: center; /* Garante o alinhamento do texto */
 }
 
@@ -719,18 +742,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 38px;
-  gap: 6px;
+  padding: 0 clamp(15px, 2.5vw, 36px);
+  gap: clamp(3px, 0.4vw, 6px);
   width: 100%;
-  max-width: 1290px;
+  max-width: 1200px;
   margin: 0 auto; /* Centraliza o container do subtítulo */
+  justify-content: center; /* Alinha o subtítulo ao centro da tela */
 }
 
 .section-portfolio .subtitle h2.div {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Yellowtail', cursive;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 88px;
+  font-size: clamp(36px, 4.7vw, 67px);
+  line-height: clamp(44px, 5.7vw, 82px);
   color: #F8F0ED;
   margin: 0;
 }
@@ -740,23 +764,23 @@
   display: flex;
   flex-direction: row;
   justify-content: center; /* Centraliza as colunas */
-  gap: 30px; /* Cria o espaço para as colunas "respirarem" */
+  gap: clamp(12px, 2vw, 29px); /* Cria o espaço para as colunas "respirarem" */
   align-items: flex-start;
   width: 100%;
-  max-width: 1290px;
+  max-width: 1200px;
   margin: 0 auto; /* Centraliza o container principal do artigo */
   
   /* Efeito Vidro Metálico para o Container Principal */
   box-sizing: border-box;
-  padding: 38px;
+  padding: clamp(15px, 2.5vw, 36px);
   background: 
     linear-gradient(235deg, rgba(74, 42, 28, 0.8), transparent 40%), 
     linear-gradient(45deg, rgba(37, 21, 14, 0.8), transparent 40%), 
     rgba(26, 15, 10, 0.7); /* Paleta Cinnamon Wood Escura */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
+  border-radius: clamp(12px, 2vw, 29px);
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   z-index: 2;
@@ -788,7 +812,7 @@
 .section-portfolio .article::after {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: clamp(-2px, -0.4vw, -5px);
   border-radius: inherit;
   background: conic-gradient(
     from -45deg at center,
@@ -798,7 +822,7 @@
     rgba(199, 135, 107, 0.4) 70%,
     transparent 90%
   );
-  filter: blur(20px);
+  filter: blur(15px);
   z-index: -1;
   pointer-events: none;
 }
@@ -814,17 +838,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 38px 15px;
+  padding: clamp(15px, 2.5vw, 36px) clamp(6px, 1vw, 14px);
   margin: 0;
-  width: 405px;
+  width: 100%;
+  flex: 1; /* Toma 1 terço do espaço (igual às outras 2 colunas) */
   position: relative; /* Habilita o posicionamento absoluto para o link do Instagram */
 }
 
 .section-portfolio .teus-img img {
-  width: 375px;
-  height: 667px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: clamp(6px, 1vw, 14px);
 }
 
 /* Grids e Colunas */
@@ -833,8 +858,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  gap: 15px;
-  flex: 1; /* Permite que este container se ajuste ao espaço restante */
+  gap: clamp(12px, 2vw, 29px); /* Iguala o gap externo para que o espaço entre as 3 colunas seja idêntico */
+  flex: 2; /* Toma 2 terços do espaço, para acomodar e distribuir as 2 colunas internas perfeitamente */
 }
 
 .section-portfolio .grid,
@@ -847,25 +872,25 @@
 
 .section-portfolio .grid {
   justify-content: flex-start;
-  padding: 15px;
-  gap: 15px;
+  padding: clamp(6px, 1vw, 14px);
+  gap: clamp(6px, 1vw, 14px);
 }
 
 .section-portfolio .grid-2 {
   justify-content: space-between;
-  padding: 15px;
-  gap: 50px;
+  padding: clamp(6px, 1vw, 14px);
+  gap: clamp(19px, 3.2vw, 47px);
   background: rgba(37, 21, 14, 0.2);
   box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  border-radius: 15px;
+  backdrop-filter: blur(3px);
+  border-radius: clamp(6px, 1vw, 14px);
 }
 
 .section-portfolio .div-2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: clamp(3px, 0.5vw, 7px);
   width: 100%;
 }
 
@@ -874,22 +899,23 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 11px;
+  gap: clamp(4px, 0.6vw, 10px);
   width: 100%;
-  height: 44px;
-  margin-bottom: 8px;
+  height: auto;
+  margin-bottom: clamp(3px, 0.5vw, 7px);
+  opacity: 0; /* Invisível antes da animação sequencial */
 }
 
 .section-portfolio .title i {
-  font-size: 30px;
+  font-size: clamp(16px, 2vw, 29px);
   color: #F1E1DA;
 }
 
 .section-portfolio .title h3.text-wrapper-2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(18px, 2.4vw, 33px);
+  line-height: clamp(22px, 2.9vw, 41px);
   color: #F1E1DA;
   margin: 0;
 }
@@ -900,20 +926,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 15px;
-  gap: 6px;
+  padding: clamp(6px, 1vw, 14px);
+  gap: clamp(3px, 0.4vw, 6px);
   width: 100%;
   
   /* Efeito de Vidro Metálico Elegante */
   background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
   border-top: 2px solid rgba(241, 225, 218, 0.2);
   border-left: 1px solid rgba(241, 225, 218, 0.1);
   border-right: 1px solid rgba(241, 225, 218, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  border-radius: clamp(6px, 1vw, 14px);
   box-sizing: border-box;
   position: relative;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
@@ -930,7 +956,7 @@
 
 .section-portfolio .frame.entrega-final {
   height: auto;
-  min-height: 356px;
+  min-height: clamp(134px, 23vw, 331px);
   align-items: center;
 }
 
@@ -938,8 +964,8 @@
 .section-portfolio h4.text-wrapper-3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: clamp(9px, 1vw, 14px);
+  line-height: clamp(11px, 1.2vw, 17px);
   color: #E3C3B5;
   margin: 0;
 }
@@ -947,9 +973,9 @@
 .section-portfolio p.p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
-  color: #7D736E;
+  font-size: clamp(7px, 0.7vw, 10px);
+  line-height: clamp(8px, 0.9vw, 12px);
+  color: #F8F0ED;
   margin: 0;
 }
 
@@ -962,9 +988,9 @@
 .section-portfolio p.quer-jogar-silksong {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
+  font-size: clamp(11px, 1.2vw, 17px);
+  line-height: clamp(14px, 1.5vw, 21px);
+  text-align: left;
   color: #F8F0ED;
   margin: 0;
 }
@@ -972,23 +998,34 @@
 /* Imagens Decorativas */
 .section-portfolio .eevee-decorative {
   position: absolute;
-  width: 194px;
-  height: 194px;
-  left: 1238px;
-  top: 261px;
+  width: clamp(73px, 12.5vw, 181px);
+  height: clamp(73px, 12.5vw, 181px);
+  left: 73%;
+  top: clamp(100px, 16.9vw, 243px);
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
   z-index: 3;
+  transition: transform 0.4s ease-in-out;
 }
 
 .section-portfolio .silksong-decorative {
   position: absolute;
-  width: 300px;
-  height: 209px;
-  left: 21px;
-  top: 908px;
+  width: clamp(113px, 19.3vw, 279px);
+  height: clamp(79px, 13.5vw, 195px);
+  left: 16%;
+  top: 75%;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 4;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Efeito de levitação nas imagens decorativas quando o card principal recebe hover */
+.section-portfolio .article:hover .eevee-decorative {
+  transform: translateY(-10px) rotate(3deg); /* Leve rotação para dar mais vida */
+}
+
+.section-portfolio .article:hover .silksong-decorative {
+  transform: matrix(-1, 0, 0, 1, 0, 0) translateY(-12px) rotate(-2deg); /* Combina a inversão com a levitação e rotação */
 }
 
 /* Botão Link Instagram */
@@ -997,14 +1034,14 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 34px;
-  height: 34px;
-  right: 15px; /* Alinha à direita da imagem (considerando o padding do container) */
-  bottom: -6px; /* Posiciona cirurgicamente 10px abaixo da imagem */
+  width: clamp(20px, 2.2vw, 32px);
+  height: clamp(20px, 2.2vw, 32px);
+  right: clamp(6px, 1vw, 14px);
+  bottom: clamp(-3px, -0.4vw, -6px);
   background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
   box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px);
-  border-radius: 75px;
+  backdrop-filter: blur(3px);
+  border-radius: clamp(28px, 4.8vw, 69px);
   z-index: 5;
   text-decoration: none;
   color: #F8F0ED;
@@ -1015,6 +1052,6 @@
   background: rgba(255, 255, 255, 0.1);
 }
 .section-portfolio .link-instagram img {
-  width: 18px;
-  height: 18px;
+  width: clamp(10px, 1.2vw, 17px);
+  height: clamp(10px, 1.2vw, 17px);
 }
