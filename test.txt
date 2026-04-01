@@ -1,17 +1,37 @@
-/* Portfolio_Intro_SocialMedia */
+/* Frame 2539 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: center;
-padding: 50px 100px;
-gap: 50px;
+align-items: flex-start;
+padding: 0px;
 
 position: relative;
 width: 1920px;
-height: 1066px;
+height: 4851px;
 
-background: #171717;
+
+
+/* Portfolio_Intro_Design */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 50px 100px;
+gap: 90px;
+
+width: 1920px;
+height: 231px;
+
+background: #060C1D;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
 
 
 /* subtitle */
@@ -19,12 +39,13 @@ background: #171717;
 /* Auto layout */
 display: flex;
 flex-direction: row;
+justify-content: center;
 align-items: center;
 padding: 0px 50px;
 gap: 8px;
 
 width: 1720px;
-height: 117px;
+height: 131px;
 
 
 /* Inside auto layout */
@@ -34,16 +55,16 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Social Media */
+/* Design */
 
-width: 632px;
-height: 117px;
+width: 239px;
+height: 131px;
 
-font-family: 'Montserrat';
+font-family: 'Yellowtail';
 font-style: normal;
-font-weight: 700;
+font-weight: 400;
 font-size: 96px;
-line-height: 117px;
+line-height: 131px;
 /* identical to box height */
 
 color: #F8F0ED;
@@ -55,18 +76,12 @@ order: 0;
 flex-grow: 0;
 
 
-/* article */
+/* Div_Tarot */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-isolation: isolate;
+width: 1920px;
+height: 1540px;
 
-width: 1720px;
-height: 779px;
-
+background: #F7E5C9;
 
 /* Inside auto layout */
 flex: none;
@@ -75,25 +90,25 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* div */
+/* Group 36 */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 15px;
-isolation: isolate;
-
-width: 560px;
-height: 779px;
+position: absolute;
+width: 1665px;
+height: 1200px;
+left: calc(50% - 1665px/2 + 0.5px);
+top: calc(50% - 1200px/2);
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+
+/* Frame 2468 1 */
+
+position: absolute;
+width: 900px;
+height: 1200px;
+left: 128px;
+top: 170px;
+
+background: url(Frame 2468.png);
 
 
 /* title */
@@ -101,359 +116,32 @@ z-index: 0;
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 560px;
-height: 59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Paschoalin */
-
-width: 274px;
-height: 59px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 541002392_18473833849077084_454137477132073766_n 1 */
-
-width: 396px;
-height: 705px;
-
-background: url(491452958_18497043217007402_8638024980741355996_n.jpg);
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-z-index: 1;
-
-
-/* amor 1 */
+align-items: flex-start;
+padding: 50px;
+gap: 25px;
 
 position: absolute;
-width: 100px;
-height: 100px;
-left: 43px;
-top: 47px;
+width: 765px;
+height: 1200px;
+left: 1028px;
+top: 170px;
 
-background: url(amor.png);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-z-index: 2;
-
-
-/* Frame 2535 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-
-width: 1160px;
-height: 779px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-z-index: 1;
-
-
-/* divs */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
-
-width: 1160px;
-height: 579px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2528 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 20px;
-
-width: 1160px;
-height: 579px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* grid */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
-
-width: 1120px;
-height: 509px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2529 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 550px;
-height: 509px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
 
 
 /* title */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 550px;
-height: 59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 40px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 9.38%;
-right: 9.38%;
-top: 12.5%;
-bottom: 0%;
-
-background: #FEE6EA;
-
-
-/* O Projeto */
-
-width: 237px;
-height: 59px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2518 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 550px;
-height: 140px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* O Cliente */
-
-width: 95px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Criador de conteúdo e streamer de variedades, com foco no universo dos games independentes e lifestyle. Conhecido por sua identidade com forte influência cyberpunk e por sua marca registrada inconfundível: o icônico bigode. */
-
-width: 510px;
+width: 683px;
 height: 68px;
 
 font-family: 'Montserrat';
 font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2519 */
-
-box-sizing: border-box;
-
-/* Auto layout */
+font-weight: 700;
+font-size: 56px;
+line-height: 68px;
 display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
+align-items: center;
 
-width: 550px;
-height: 174px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* O Projeto */
-
-width: 97px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
+color: #1F1505;
 
 
 /* Inside auto layout */
@@ -462,18 +150,21 @@ order: 0;
 flex-grow: 0;
 
 
-/* Foi desenvolvida uma estratégia de crescimento focada em organização de processos, análise rigorosa de métricas e otimização de conteúdo multiplataforma. O objetivo era escalar a presença digital do criador, transformando clipes de lives e conteúdos orgânicos em um ecossistema estruturado, abrindo portas para novas parcerias e conexões reais com a comunidade e marcas. */
+/* desc */
 
-width: 510px;
-height: 102px;
+width: 665px;
+height: 539px;
 
 font-family: 'Montserrat';
 font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
+font-weight: 500;
+font-size: 40px;
+line-height: 49px;
+display: flex;
+align-items: center;
+text-align: justify;
 
-color: #7D736E;
+color: #1F1505;
 
 
 /* Inside auto layout */
@@ -483,28 +174,121 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 2520 */
+/* Div_Florence */
 
-box-sizing: border-box;
+width: 1920px;
+height: 1540px;
+
+background: #2C313A;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 2468 1 */
+
+position: absolute;
+width: 1155px;
+height: 1540px;
+left: 0px;
+top: 0px;
+
+
+
+/* Group 37 */
+
+position: absolute;
+width: 1665px;
+height: 1125px;
+left: calc(50% - 1665px/2 + 0.5px);
+top: calc(50% - 1125px/2 + 0.5px);
+
+
+
+/* Frame 2491 1 */
+
+position: absolute;
+width: 900px;
+height: 1125px;
+left: 128px;
+top: 208px;
+
+background: url(Frame 2491.png);
+
+
+/* title */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: flex-start;
-padding: 20px;
-gap: 8px;
+padding: 50px;
+gap: 25px;
 
-width: 550px;
-height: 106px;
+position: absolute;
+width: 765px;
+height: 1125px;
+left: 1028px;
+top: 208px;
 
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
+
+
+/* title */
+
+width: 665px;
+height: 204px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 68px;
+display: flex;
+align-items: center;
+
+color: #C5CAD3;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* desc */
+
+width: 665px;
+height: 539px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 49px;
+display: flex;
+align-items: center;
+text-align: justify;
+
+color: #F0F2F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Div_Athenas */
+
+width: 1920px;
+height: 1540px;
+
+background: #292541;
 
 /* Inside auto layout */
 flex: none;
@@ -513,738 +297,86 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* O Objetivo */
+/* Group 38 */
 
-width: 110px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
+position: absolute;
+width: 1665px;
+height: 1200px;
+left: calc(50% - 1665px/2 + 0.5px);
+top: calc(50% - 1200px/2);
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
 
+/* Frame 2468 1 */
 
-/* Entregar uma copy que acompanhasse essa qualidade visual, mantendo a autenticidade de "fã para fã" */
+position: absolute;
+width: 900px;
+height: 1200px;
+left: 128px;
+top: 170px;
 
-width: 510px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2532 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 550px;
-height: 509px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
+background: url(Frame 2538.png);
 
 
 /* title */
 
 /* Auto layout */
 display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 550px;
-height: 59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* <i class="ph ph-strategy"></i> */
-
-width: 40px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
+flex-direction: column;
+align-items: flex-start;
+padding: 50px;
+gap: 25px;
 
 position: absolute;
-left: 15.62%;
-right: 9.37%;
-top: 12.5%;
-bottom: 12.5%;
+width: 765px;
+height: 1200px;
+left: 1028px;
+top: 170px;
 
-background: #FEE6EA;
-
-
-/* Atuação */
-
-width: 210px;
-height: 59px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2522 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 550px;
-height: 140px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Estratégia Editorial e Copywriting */
-
-width: 345px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Estruturação de um calendário de postagens inteligente e consistente. Criação de roteiros engajadores e textos persuasivos (Copy), garantindo que a essência, o humor e a estética cyberpunk do criador fossem mantidos em todos os pontos de contato. */
-
-width: 510px;
-height: 68px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2523 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 550px;
-height: 140px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Análise de Dados e Performance */
-
-width: 336px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Monitoramento constante de métricas e testes de performance para entender o comportamento do algoritmo e da audiência. O crescimento expressivo de alcance e views foi resultado direto de uma adaptação rápida e orientada por dados. */
-
-width: 510px;
-height: 68px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2524 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-gap: 8px;
-
-width: 550px;
-height: 140px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* PR, Relacionamento e Networking */
-
-width: 355px;
-height: 24px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Atuação estratégica nos bastidores para conectar o criador a novas oportunidades de negócios. Auxílio direto nas negociações, contato com marcas e expansão da rede de networking dentro do cenário de games e tecnologia. */
-
-width: 510px;
-height: 68px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* grid */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px 20px;
-gap: 8px;
-
-width: 1160px;
-height: 200px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2531 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 20px;
-
-width: 1120px;
-height: 200px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
 
 
 /* title */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 15px;
-
-width: 1120px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* <i class="ph ph-target"></i> */
-
-width: 40px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 9.32%;
-right: 9.36%;
-top: 9.36%;
-bottom: 9.31%;
-
-background: #FEE6EA;
-
-
-/* Resultados */
-
-width: 233px;
-height: 49px;
+width: 665px;
+height: 136px;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
+font-size: 56px;
+line-height: 68px;
+display: flex;
+align-items: center;
+
+color: #F0EFF6;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* desc */
+
+width: 665px;
+height: 539px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
 font-size: 40px;
 line-height: 49px;
-/* identical to box height */
 display: flex;
 align-items: center;
-text-align: center;
+text-align: justify;
 
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2537 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 20px;
-
-width: 1120px;
-height: 131px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 2518 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 8px;
-
-width: 360px;
-height: 131px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* +259,7% */
-
-width: 163px;
-height: 49px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 40px;
-line-height: 49px;
-/* identical to box height */
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Alcance Multiplataforma (no primeiro mês) */
-
-width: 320px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-
-color: #7D736E;
+color: #F0EFF6;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
 align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2519 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 8px;
-
-width: 360px;
-height: 131px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* +116,7% */
-
-width: 147px;
-height: 49px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 40px;
-line-height: 49px;
-/* identical to box height */
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Aumento de Visualizações (no primeiro mês) */
-
-width: 320px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 2520 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 8px;
-
-width: 360px;
-height: 131px;
-
-/* Pas */
-background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%);
-/* Glass */
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 20px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* +245,5% */
-
-width: 164px;
-height: 49px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 40px;
-line-height: 49px;
-/* identical to box height */
-text-align: center;
-
-color: #FEE6EA;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Aumento de Seguidores (no primeiro mês) */
-
-width: 320px;
-height: 34px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-
-color: #7D736E;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* https://www.instagram.com/reel/DJJ8rqAOIC7/ */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 10px;
-
-position: absolute;
-width: 45px;
-height: 45px;
-left: 433px;
-top: 789px;
-
-background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
-box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(5px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 100px;
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-z-index: 2;
-
-
-/* Vector */
-
-width: 26px;
-height: 26px;
-
-background: #F8F0ED;
-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
 flex-grow: 0;

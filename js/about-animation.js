@@ -104,14 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgSections = [
       { element: document.querySelector('.section-about'), bgClass: 'theme-base' },
       { element: document.querySelector('.section-portfolio'), bgClass: 'theme-brown' },
-      { element: document.querySelector('.section-socialmedia'), bgClass: 'theme-dark' }
+      { element: document.querySelector('.section-socialmedia'), bgClass: 'theme-dark' },
+      { element: document.querySelector('.creator-section'), bgClass: 'theme-ink' }
     ];
 
     const bgObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Remove todas as classes de background antes de aplicar a nova
-          document.body.classList.remove('theme-base', 'theme-brown', 'theme-dark');
+          document.body.classList.remove('theme-base', 'theme-brown', 'theme-dark', 'theme-ink');
           
           const activeSec = bgSections.find(sec => sec.element === entry.target);
           if (activeSec && activeSec.bgClass) {
@@ -153,5 +154,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.15 });
     
     smObserver.observe(socialMediaSection);
+  }
+
+  // =========================================
+  // ANIMAÇÃO DA SEÇÃO CRIADORA DE CONTEÚDO (FADE IN SEQUENCIAL)
+  // =========================================
+  const creatorSection = document.querySelector('.creator-section');
+  if (creatorSection) {
+    const creatorItems = creatorSection.querySelectorAll('.creator-profile, .brand-title, .card');
+    
+    const creatorObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: creatorItems,
+          opacity: [0, 1],
+          translateY: [20, 0],
+          delay: anime.stagger(100),
+          duration: 800,
+          easing: 'easeOutQuart',
+          complete: function(anim) {
+            anim.animatables.forEach(a => a.target.style.transform = '');
+          }
+        });
+        creatorObserver.unobserve(creatorSection);
+      }
+    }, { threshold: 0.15 });
+    
+    creatorObserver.observe(creatorSection);
   }
 });

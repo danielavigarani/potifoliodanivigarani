@@ -348,15 +348,15 @@
   min-width: clamp(75px, 9.2vw, 133px);
   height: clamp(20px, 2.5vw, 36px);
   
-  /* Efeito de Vidro Metálico Elegante (Copiado dos balões) */
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
-  border-top: 2px solid rgba(225, 225, 225, 0.2);
-  border-left: 1px solid rgba(225, 225, 225, 0.1);
-  border-right: 1px solid rgba(225, 225, 225, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* Efeito de Vidro Metálico Premium */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: clamp(15px, 2.5vw, 36px);
   z-index: 1;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease; /* Evita 'all' para não conflitar com anime.js */
@@ -417,18 +417,16 @@
   gap: clamp(3px, 0.4vw, 6px);
   width: auto;
   
-  /* Efeito de Vidro Metálico Elegante */
-  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(7px); /* Desfoque do vidro fosco */
-  -webkit-backdrop-filter: blur(7px); /* Suporte para navegadores Apple */
-  /* Mistura das sombras: Externa (do snippet) + Interna (seu design) */
-  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  /* Efeito de Vidro Metálico Premium */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
   
-  /* Bordas simulando o reflexo da luz no vidro/metal */
-  border-top: 2px solid rgba(225, 225, 225, 0.2);
-  border-left: 1px solid rgba(225, 225, 225, 0.1);
-  border-right: 1px solid rgba(225, 225, 225, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: clamp(6px, 1vw, 14px);
   position: relative;
   z-index: 1;
@@ -439,10 +437,10 @@
 /* Efeito Hover ("Brilho") para Balões e Badges */
 .timeline-item:hover,
 .timeline-badge-container:hover {
-  background: rgba(255, 255, 255, 0.12); /* Aumenta a opacidade simulando captação de luz */
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(255, 255, 255, 0.4); /* Reforça o brilho interno do vidro */
-  border-top: 2px solid rgba(255, 255, 255, 0.5); /* A borda superior reflete mais intensamente */
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.4), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .timeline-item:hover {
@@ -621,17 +619,16 @@
   width: 100%;
   min-height: clamp(35px, 4.3vw, 62px);
   
-  /* Efeito de Vidro Metálico Elegante */
-  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(7px); /* Desfoque do vidro fosco */
-  -webkit-backdrop-filter: blur(7px); /* Suporte para navegadores Apple */
-  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  /* Efeito de Vidro Metálico Premium */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(255, 255, 255, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
   
-  /* Bordas simulando o reflexo da luz no vidro/metal */
-  border-top: 2px solid rgba(225, 225, 225, 0.2);
-  border-left: 1px solid rgba(225, 225, 225, 0.1);
-  border-right: 1px solid rgba(225, 225, 225, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: clamp(6px, 1vw, 14px);
   position: relative;
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
@@ -639,10 +636,10 @@
 }
 
 .expertise-card:hover {
-  background: rgba(255, 255, 255, 0.12); /* Aumenta a opacidade simulando captação de luz */
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(255, 255, 255, 0.4); /* Reforça o brilho interno do vidro */
-  border-top: 2px solid rgba(255, 255, 255, 0.5); /* A borda superior reflete mais intensamente */
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.4), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
   transform: translateY(-3px); /* Levanta o elemento suavemente */
 }
 
@@ -698,9 +695,11 @@
   padding: clamp(3px, 0.5vw, 7px);
   width: clamp(18px, 2.2vw, 32px);
   height: clamp(18px, 2.2vw, 32px);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: clamp(28px, 4.8vw, 69px);
 }
 
@@ -881,9 +880,10 @@
   justify-content: space-between;
   padding: clamp(6px, 1vw, 14px);
   gap: clamp(19px, 3.2vw, 47px);
-  background: rgba(37, 21, 14, 0.2);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(135deg, rgba(37, 21, 14, 0.3) 0%, rgba(37, 21, 14, 0.1) 100%);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.05), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: clamp(6px, 1vw, 14px);
 }
 
@@ -931,15 +931,15 @@
   gap: clamp(3px, 0.4vw, 6px);
   width: 100%;
   
-  /* Efeito de Vidro Metálico Elegante */
-  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
-  border-top: 2px solid rgba(241, 225, 218, 0.2);
-  border-left: 1px solid rgba(241, 225, 218, 0.1);
+  /* Efeito de Vidro Metálico Premium */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(241, 225, 218, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(241, 225, 218, 0.3);
+  border-left: 1px solid rgba(241, 225, 218, 0.2);
   border-right: 1px solid rgba(241, 225, 218, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(241, 225, 218, 0.02);
   border-radius: clamp(6px, 1vw, 14px);
   box-sizing: border-box;
   position: relative;
@@ -948,10 +948,10 @@
 }
 
 .section-portfolio .frame:hover {
-  background: rgba(255, 255, 255, 0.12); /* Aumenta a opacidade simulando captação de luz */
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(241, 225, 218, 0.4);
-  border-top: 2px solid rgba(241, 225, 218, 0.5);
-  border-left: 1px solid rgba(241, 225, 218, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.4), inset 0px 1px 2px rgba(241, 225, 218, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(241, 225, 218, 0.5);
+  border-left: 1px solid rgba(241, 225, 218, 0.4);
   transform: translateY(-3px);
 }
 
@@ -1039,9 +1039,11 @@
   height: clamp(20px, 2.2vw, 32px);
   right: clamp(6px, 1vw, 14px);
   bottom: clamp(-3px, -0.4vw, -6px);
-  background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: clamp(28px, 4.8vw, 69px);
   z-index: 5;
   text-decoration: none;
@@ -1050,7 +1052,8 @@
 }
 .section-portfolio .link-instagram:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
 }
 .section-portfolio .link-instagram img {
   width: clamp(12px, 1.4vw, 18px);
@@ -1072,6 +1075,18 @@
   --deep-crimson-800: #640214;
   --deep-crimson-900: #32010A;
   --deep-crimson-950: #230107;
+  
+  --ink-black-50: #EAEEFB;
+  --ink-black-100: #D5DEF6;
+  --ink-black-200: #AABCEE;
+  --ink-black-300: #809BE5;
+  --ink-black-400: #567ADC;
+  --ink-black-500: #2B58D4;
+  --ink-black-600: #2347A9;
+  --ink-black-700: #1A357F;
+  --ink-black-800: #112355;
+  --ink-black-900: #09122A;
+  --ink-black-950: #060C1E;
 }
 
 /* =========================================
@@ -1092,6 +1107,10 @@ body.theme-brown {
 
 body.theme-dark {
   background-color: #230107 !important;
+}
+
+body.theme-ink {
+  background-color: #060C1E !important; /* Base do azul profundo */
 }
 
 /* Container Principal */
@@ -1336,14 +1355,14 @@ body.theme-dark {
   width: 100%;
   
   background: linear-gradient(223.39deg, #96031E 0%, #32010A 100%); /* Gradiente linear vibrante solicitado */
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.2), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(254, 230, 234, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(254, 230, 234, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
   
-  border-top: 2px solid rgba(254, 230, 234, 0.2);
-  border-left: 1px solid rgba(254, 230, 234, 0.1);
+  border-top: 1px solid rgba(254, 230, 234, 0.3);
+  border-left: 1px solid rgba(254, 230, 234, 0.2);
   border-right: 1px solid rgba(254, 230, 234, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   
   border-radius: clamp(6px, 1vw, 14px);
   box-sizing: border-box;
@@ -1376,9 +1395,9 @@ body.theme-dark {
 
 .section-socialmedia .card:hover,
 .section-socialmedia .result-card:hover {
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3), inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 6px rgba(254, 230, 234, 0.4);
-  border-top: 2px solid rgba(254, 230, 234, 0.5);
-  border-left: 1px solid rgba(254, 230, 234, 0.3);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.5), inset 0px 1px 2px rgba(254, 230, 234, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(254, 230, 234, 0.5);
+  border-left: 1px solid rgba(254, 230, 234, 0.4);
   transform: translateY(-3px);
 }
 
@@ -1410,9 +1429,10 @@ body.theme-dark {
   
   /* O container externo recebe o efeito grid-2 de fundo fosco */
   padding: clamp(6px, 1vw, 14px);
-  background: rgba(35, 1, 7, 0.2);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(135deg, rgba(35, 1, 7, 0.3) 0%, rgba(35, 1, 7, 0.1) 100%);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.05), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: clamp(6px, 1vw, 14px);
 }
 
@@ -1462,9 +1482,11 @@ body.theme-dark {
   height: clamp(20px, 2.2vw, 32px);
   /* Empurra o botão para baixo compensando o padding menor, deixando a ~5px da imagem */
   bottom: clamp(-25px, -1.8vw, -24px); 
-  background: linear-gradient(225deg, rgba(255, 255, 255, 0.001) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.001) 100%);
-  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.2), inset 0px 2px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(3px); /* Unificado com o Copy */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: clamp(28px, 4.8vw, 69px);
   z-index: 5; /* Unificado com o Copy */
   text-decoration: none;
@@ -1473,11 +1495,382 @@ body.theme-dark {
 }
 .section-socialmedia .link-instagram:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
 }
 .section-socialmedia .link-instagram i {
   font-size: clamp(12px, 1.4vw, 18px); /* Mesmo tamanho exato da imagem de Copy */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* =========================================
+   SEÇÃO: CRIADORA DE CONTEÚDO
+   ========================================= */
+
+/* Container Principal (Herdando fluidez e limites do sistema) */
+.creator-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(15px, 2.5vw, 36px) clamp(28px, 5vw, 69px);
+  gap: clamp(15px, 2.5vw, 36px);
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: transparent;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Header Subtítulo Centralizado */
+.creator-section .subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 clamp(15px, 2.5vw, 36px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.creator-section h1.text-wrapper {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: clamp(48px, 6.2vw, 89px);
+  line-height: clamp(65px, 8.4vw, 122px);
+  color: #F8F0ED;
+  margin: 0;
+  text-align: center;
+}
+
+/* Article com Glassmorphism Ink-Black */
+.creator-section .article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 29px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: clamp(15px, 2.5vw, 36px);
+  
+  background: 
+    linear-gradient(235deg, rgba(26, 53, 127, 0.8), transparent 40%), 
+    linear-gradient(45deg, rgba(9, 18, 42, 0.8), transparent 40%), 
+    rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0px 20px 36px rgba(0, 0, 0, 0.4);
+  border-radius: clamp(12px, 2vw, 29px);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 2;
+}
+
+/* Borda Neon do Article */
+.creator-section .article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    var(--ink-black-200) 30%,
+    transparent 50%,
+    var(--ink-black-500) 70%,
+    transparent 90%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.creator-section .article::after {
+  content: "";
+  position: absolute;
+  inset: clamp(-2px, -0.4vw, -5px);
+  border-radius: inherit;
+  background: conic-gradient(
+    from -45deg at center,
+    transparent 10%,
+    rgba(170, 188, 238, 0.4) 30%,
+    transparent 50%,
+    rgba(43, 88, 212, 0.4) 70%,
+    transparent 90%
+  );
+  filter: blur(15px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.creator-section .article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Coluna Esquerda: Perfil */
+.creator-section .creator-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, 1vw, 14px);
+  flex: 1; /* Mantém a tríade de espaço igual */
+  opacity: 0; /* Fade in sequencial via JS */
+}
+
+.creator-section .creator-profile .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: clamp(3px, 0.5vw, 7px);
+}
+
+.creator-section h2.creator-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3.8vw, 55px);
+  line-height: clamp(30px, 4.6vw, 67px);
+  color: var(--ink-black-50);
+  margin: 0;
+  text-align: center;
+}
+
+.creator-section .image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: clamp(6px, 1vw, 14px);
+}
+
+.creator-section .creator-img {
+  width: 100%;
+  height: auto;
+  border-radius: clamp(6px, 1vw, 14px);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Botão Instagram unificado */
+.creator-section .link-instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: clamp(6px, 1vw, 14px);
+  bottom: clamp(-25px, -1.8vw, -24px); 
+  width: clamp(20px, 2.2vw, 32px);
+  height: clamp(20px, 2.2vw, 32px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: clamp(28px, 4.8vw, 69px);
+  z-index: 5;
+  text-decoration: none;
+  color: #F8F0ED;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.creator-section .link-instagram:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.creator-section .link-instagram i {
+  font-size: clamp(12px, 1.4vw, 18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Coluna Direita: Conteúdo */
+.creator-section .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 2; /* 2 terços do espaço */
+  gap: clamp(12px, 2vw, 29px);
+}
+
+/* Balões (Cards Interativos) */
+.creator-section .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(10px, 1.5vw, 22px);
+  gap: clamp(6px, 1vw, 14px);
+  width: 100%;
+  
+  background: linear-gradient(223.39deg, var(--ink-black-500) 0%, var(--ink-black-800) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.2), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
+  
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  
+  border-radius: clamp(6px, 1vw, 14px);
+  box-sizing: border-box;
+  position: relative;
+  transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  isolation: isolate;
+  opacity: 0;
+}
+
+/* Camada invisível para o hover suave (Glow Metálico Azul) */
+.creator-section .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(223.39deg, var(--ink-black-400) 0%, var(--ink-black-700) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.creator-section .card:hover::before {
+  opacity: 1;
+}
+
+.creator-section .card:hover {
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.5), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Textos dentro do Card */
+.creator-section .card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(6px, 1vw, 14px);
+  width: 100%;
+}
+
+.creator-section .card-header i {
+  font-size: clamp(20px, 2.5vw, 36px);
+  color: var(--ink-black-100);
+}
+
+.creator-section .card-header h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 28px);
+  line-height: clamp(16px, 2.2vw, 32px);
+  color: var(--ink-black-100);
+  margin: 0;
+}
+
+.creator-section .card p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(9px, 1.2vw, 16px);
+  line-height: clamp(12px, 1.5vw, 22px);
+  color: var(--ink-black-50);
+  margin: 0;
+}
+
+/* Texto sutilmente reduzido para os cartões horizontais largos */
+.creator-section .wide-card p {
+  font-size: clamp(8px, 1.05vw, 14px);
+  line-height: clamp(11px, 1.4vw, 20px);
+}
+
+/* Grid de Marcas Parceiras */
+.creator-section .brands-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: clamp(12px, 2vw, 29px);
+  width: 100%;
+}
+
+.creator-section .brand-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.2vw, 18px);
+  flex: 1; /* As três colunas dividem o espaço perfeitamente */
+}
+
+.creator-section .brand-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(4px, 0.6vw, 10px);
+  margin-bottom: clamp(2px, 0.3vw, 6px);
+  opacity: 0; /* Invisível antes da animação JS */
+}
+
+/* Reduzido 15% do tamanho original */
+.creator-section .brand-title i {
+  font-size: clamp(14px, 1.8vw, 25px);
+  color: var(--ink-black-100);
+}
+
+.creator-section .brand-title h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(10px, 1.3vw, 17px);
+  line-height: clamp(12px, 1.5vw, 20px);
+  color: var(--ink-black-100);
+  margin: 0;
+}
+
+.creator-section .brand-item-card {
+  /* Estende as propriedades de balão original, mas mais compacto */
+  padding: clamp(8px, 1.2vw, 18px);
+  gap: clamp(3px, 0.4vw, 6px);
+  flex: 1; /* Mágica do Flexbox: Faz os balões esticarem igualmente, alinhando o fundo das 3 colunas perfeitamente */
+}
+
+.creator-section .brand-item-card span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(8px, 1.2vw, 15px);
+  color: var(--ink-black-100);
+}
+
+.creator-section .brand-item-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(7px, 0.85vw, 11px);
+  line-height: clamp(8px, 1vw, 14px);
+  color: var(--ink-black-50);
+  margin: 0;
+}
+
+/* Imagem dos Logos Fantasmas flutuando no fundo */
+.creator-section .bg-logos {
+  position: absolute;
+  bottom: clamp(15px, 2.5vw, 36px);
+  right: clamp(15px, 2.5vw, 36px);
+  width: clamp(200px, 30vw, 400px);
+  height: auto;
+  opacity: 0.15;
+  transform: rotate(-5deg);
+  pointer-events: none;
+  z-index: 0;
 }
