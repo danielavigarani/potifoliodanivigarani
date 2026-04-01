@@ -570,8 +570,112 @@
   </article>
 </section>
 
-<!-- Botão Flutuante Voltar ao Topo -->
+<section class="design-section" id="design" aria-label="Portfólio - Design">
+  <header class="subtitle">
+    <h1 class="text-wrapper">Design</h1>
+  </header>
 
+  <article class="article">
+    
+    <div class="carousel-container">
+      <button class="carousel-btn prev-btn" aria-label="Slide anterior">
+        <i class="ph ph-caret-left"></i>
+      </button>
+
+      <div class="carousel-track-wrapper">
+        <ul class="carousel-track">
+          
+          <!-- Slide 1: Tarot -->
+          <li class="carousel-slide current-slide">
+            <div class="slide-content">
+              <div class="image-wrapper">
+                <img class="slide-image" src="img/design/tarot.png" alt="Direção de Arte: Tarot" />
+              </div>
+              <div class="content-wrapper">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="ph ph-paint-brush card-icon" aria-hidden="true"></i>
+                    <h4>O Universo de Florence</h4>
+                  </div>
+                  <p>Para esse projeto com estética scrapbook, o objetivo foi traduzir o misticismo e a simbologia das cartas para o visual. Como o Tarot faz parte dos meus estudos e rituais diários, coloquei essa vivência na direção de arte, unindo texturas rasgadas e colagens a significados reais, criando algo que vai além do estético.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Slide 2: Florence -->
+          <li class="carousel-slide">
+            <div class="slide-content">
+              <div class="image-wrapper">
+                <img class="slide-image" src="img/design/florence.png" alt="Key Visual - A Genialidade de Florence" />
+              </div>
+              <div class="content-wrapper">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="ph ph-intersect card-icon" aria-hidden="true"></i>
+                    <h4>Key Visual: Florence</h4>
+                  </div>
+                  <p>Uma imersão visual inspirada na delicadeza e nas narrativas cotidianas que tanto amo explorar. O desafio aqui foi capturar a essência da história e a atmosfera emocional de Florence através de sobreposições e recortes, traduzindo sentimentos, intimidade e memórias em uma única composição.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Slide 3: Athenas -->
+          <li class="carousel-slide">
+            <div class="slide-content">
+              <div class="image-wrapper">
+                <img class="slide-image" src="img/design/athenas.png" alt="Projeto Athenas" />
+              </div>
+              <div class="content-wrapper">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="ph ph-bezier-curve card-icon" aria-hidden="true"></i>
+                    <h4>Projeto Athenas</h4>
+                  </div>
+                  <p>Uma imersão visual inspirada na delicadeza e nas narrativas cotidianas que tanto amo explorar. O desafio aqui foi capturar a essência da história e a atmosfera emocional de Florence através de sobreposições e recortes, traduzindo sentimentos, intimidade e memórias em uma única composição.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <button class="carousel-btn next-btn" aria-label="Próximo slide">
+        <i class="ph ph-caret-right"></i>
+      </button>
+    </div>
+
+    <div class="carousel-nav">
+      <button class="carousel-indicator current-indicator" aria-label="Ir para slide 1"></button>
+      <button class="carousel-indicator" aria-label="Ir para slide 2"></button>
+      <button class="carousel-indicator" aria-label="Ir para slide 3"></button>
+    </div>
+
+  </article>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h2 class="footer-name">Daniela Vigarani</h2>
+      <p class="footer-role">Analista de Marketing, Social Media e Growth Marketing</p>
+      <p class="footer-slogan">"Design que engaja.<br>Dados que convertem."</p>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/adanicosmica" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Instagram">
+        <i class="ph ph-instagram-logo"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/daniela-vigarani/" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn">
+        <i class="ph ph-linkedin-logo"></i>
+      </a>
+      <a href="mailto:danielavigaranisilva@gmail.com" class="footer-link" aria-label="Email">
+        <i class="ph ph-envelope-simple"></i>
+      </a>
+    </div>
+  </div>
+</footer>
 
     <!-- Botão Flutuante Voltar ao Topo -->
     <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
@@ -584,6 +688,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/about-animation.js"></script>
     <script src="js/drag-scroll.js"></script>
+    <script src="js/carousel.js"></script>
     
     <script>
       // IntersectionObserver para "desenhar" a linha da timeline e animar os balões sequencialmente

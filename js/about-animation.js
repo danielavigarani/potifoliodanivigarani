@@ -105,14 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
       { element: document.querySelector('.section-about'), bgClass: 'theme-base' },
       { element: document.querySelector('.section-portfolio'), bgClass: 'theme-brown' },
       { element: document.querySelector('.section-socialmedia'), bgClass: 'theme-dark' },
-      { element: document.querySelector('.creator-section'), bgClass: 'theme-ink' }
+      { element: document.querySelector('.creator-section'), bgClass: 'theme-ink' },
+      { element: document.querySelector('.design-section'), bgClass: 'theme-design' }
     ];
 
     const bgObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Remove todas as classes de background antes de aplicar a nova
-          document.body.classList.remove('theme-base', 'theme-brown', 'theme-dark', 'theme-ink');
+          document.body.classList.remove('theme-base', 'theme-brown', 'theme-dark', 'theme-ink', 'theme-design');
           
           const activeSec = bgSections.find(sec => sec.element === entry.target);
           if (activeSec && activeSec.bgClass) {
@@ -181,5 +182,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.15 });
     
     creatorObserver.observe(creatorSection);
+  }
+
+  // =========================================
+  // ANIMAÇÃO DA SEÇÃO DESIGN (FADE IN)
+  // =========================================
+  const designSection = document.querySelector('.design-section');
+  if (designSection) {
+    const designItems = designSection.querySelectorAll('.article');
+    
+    const designObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: designItems,
+          opacity: [0, 1],
+          translateY: [30, 0],
+          duration: 1000,
+          easing: 'easeOutQuart',
+          complete: function(anim) {
+            anim.animatables.forEach(a => a.target.style.transform = '');
+          }
+        });
+        designObserver.unobserve(designSection);
+      }
+    }, { threshold: 0.15 });
+    
+    designObserver.observe(designSection);
+  }
+
+  // =========================================
+  // ANIMAÇÃO DA SEÇÃO FOOTER (FADE IN)
+  // =========================================
+  const footerSection = document.querySelector('.site-footer');
+  if (footerSection) {
+    const footerContainer = footerSection.querySelector('.footer-container');
+    
+    const footerObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: footerContainer,
+          opacity: [0, 1],
+          translateY: [30, 0],
+          duration: 1000,
+          easing: 'easeOutQuart',
+          complete: function(anim) {
+            anim.animatables.forEach(a => a.target.style.transform = '');
+          }
+        });
+        footerObserver.unobserve(footerSection);
+      }
+    }, { threshold: 0.15 });
+    
+    footerObserver.observe(footerSection);
   }
 });
