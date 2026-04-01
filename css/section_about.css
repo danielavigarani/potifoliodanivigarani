@@ -389,8 +389,8 @@
 .timeline-section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(8px, 0.7vw, 11px);
-  line-height: clamp(9px, 1vw, 14px);
+  font-size: clamp(11px, 1.1vw, 14px);
+  line-height: clamp(14px, 1.4vw, 18px);
   color: #FFFFFF;
   z-index: 1;
   opacity: 0; /* Invisível antes da animação sequencial */
@@ -480,8 +480,8 @@
 .timeline-item time {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(10px, 0.9vw, 14px);
-  line-height: clamp(12px, 1.2vw, 18px);
+  font-size: clamp(11px, 1.1vw, 15px);
+  line-height: clamp(14px, 1.4vw, 20px);
   color: #808080;
 }
 
@@ -646,8 +646,8 @@
 .expertise-card h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(12px, 1.3vw, 18px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: clamp(18px, 2vw, 26px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -655,8 +655,8 @@
 .expertise-card p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(10px, 1vw, 14px);
-  line-height: clamp(12px, 1.3vw, 18px);
+  font-size: clamp(12px, 1.4vw, 16px);
+  line-height: clamp(16px, 1.8vw, 24px);
   color: #B3B3B3; /* var(--onyx-300) */
   margin: 0;
 }
@@ -668,8 +668,8 @@
 }
 
 .languages-card p {
-  font-size: clamp(10px, 1vw, 14px);
-  line-height: clamp(12px, 1.3vw, 18px);
+  font-size: clamp(12px, 1.4vw, 16px);
+  line-height: clamp(16px, 1.8vw, 24px);
   color: #FFFFFF;
 }
 
@@ -965,8 +965,8 @@
 .section-portfolio h4.text-wrapper-3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(12px, 1.3vw, 18px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: clamp(18px, 2vw, 26px);
   color: #E3C3B5;
   margin: 0;
 }
@@ -974,8 +974,8 @@
 .section-portfolio p.p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: clamp(10px, 1.1vw, 16px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(12px, 1.4vw, 18px);
+  line-height: clamp(18px, 2vw, 26px);
   color: #F8F0ED;
   margin: 0;
 }
@@ -1001,7 +1001,7 @@
   position: absolute;
   width: clamp(73px, 12.5vw, 181px);
   height: clamp(73px, 12.5vw, 181px);
-  left: 73%;
+  left: 78%;
   top: clamp(100px, 16.9vw, 243px);
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
   z-index: 3;
@@ -1012,8 +1012,8 @@
   position: absolute;
   width: clamp(113px, 19.3vw, 279px);
   height: clamp(79px, 13.5vw, 195px);
-  left: 16%;
-  top: 75%;
+  left: 12%;
+  top: 65%;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 4;
@@ -1420,8 +1420,8 @@ body.theme-design {
 .section-socialmedia .card h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(12px, 1.3vw, 18px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: clamp(18px, 2vw, 26px);
   color: var(--deep-crimson-100);
   margin: 0;
 }
@@ -1429,8 +1429,8 @@ body.theme-design {
 .section-socialmedia .card p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: clamp(10px, 1.1vw, 16px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(12px, 1.4vw, 18px);
+  line-height: clamp(18px, 2vw, 26px);
   color: #F8F0ED;
   margin: 0;
 }
@@ -1480,8 +1480,8 @@ body.theme-design {
 .section-socialmedia .highlight-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(10px, 1.1vw, 16px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(12px, 1.4vw, 18px);
+  line-height: clamp(18px, 2vw, 26px);
   text-align: center;
   color: #F8F0ED;
   margin: 0;
@@ -1865,15 +1865,15 @@ body.theme-design {
 .creator-section .brand-item-card span {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: clamp(11px, 1.4vw, 18px);
+  font-size: clamp(13px, 1.6vw, 20px);
   color: var(--ink-black-100);
 }
 
 .creator-section .brand-item-card p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(10px, 1.1vw, 15px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(12px, 1.4vw, 16px);
+  line-height: clamp(18px, 2vw, 24px);
   color: var(--ink-black-50);
   margin: 0;
 }
@@ -2339,4 +2339,84 @@ body.theme-design {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
+}
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES) - SEÇÕES
+   ========================================= */
+
+/* TABLETS (até 1023px) */
+@media (max-width: 1023px) {
+  /* Expande os containers de 80% para 95% para aproveitar a tela */
+  .article-about-me,
+  .timeline-cards-container,
+  .article-expertise,
+  .section-portfolio h1.text-wrapper,
+  .section-portfolio .subtitle,
+  .section-portfolio .article,
+  .section-socialmedia .subtitle,
+  .section-socialmedia .article,
+  .creator-section .subtitle,
+  .creator-section .article,
+  .design-section .subtitle,
+  .design-section .article,
+  .site-footer .footer-container {
+    width: 95%;
+  }
+
+  /* Empilha as colunas que precisam de mais espaço */
+  .article-expertise { flex-direction: column; }
+  .section-portfolio .article { flex-direction: column; align-items: center; }
+  .section-portfolio .divs { flex-direction: column; }
+  .section-socialmedia .article { flex-direction: column; }
+  .creator-section .article { flex-direction: column; }
+  .design-section .slide-content { flex-direction: column; }
+  
+  /* Ajuste de imagens decorativas para não encavalar */
+  .section-portfolio .eevee-decorative { left: 80%; top: 6%; width: clamp(50px, 10vw, 100px); height: auto; }
+  .section-portfolio .silksong-decorative { left: 2%; top: 98%; width: clamp(80px, 15vw, 120px); height: auto; }
+  .section-portfolio .teus-img { width: 100%; max-width: 400px; }
+}
+
+/* SMARTPHONES (até 767px) */
+@media (max-width: 767px) {
+  /* Empilha todo o restante para visualização vertical no celular */
+  .article-about-me { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  .timeline-cards-container { flex-direction: column; gap: 24px; }
+  .article-expertise { gap: 24px; }
+  
+  .section-portfolio .divs { gap: 24px; }
+  .section-portfolio .grid, .section-portfolio .grid-2 { gap: 16px; }
+  
+  .section-socialmedia .grid-container { flex-direction: column; gap: 24px; }
+  .section-socialmedia .results-grid { flex-direction: column; gap: 16px; }
+  
+  .creator-section .brands-grid { flex-direction: column; gap: 24px; }
+  
+  .site-footer .footer-container { flex-direction: column; text-align: center; }
+  .site-footer .footer-socials { justify-content: center; }
+  
+  /* Esconde tipografia gigante de background no mobile para não gerar ruído visual */
+  .aa-decorative, .decorative { display: none; }
+  
+  /* Ajuste Fino da Timeline para telas pequenas */
+  .learning-path-card .timeline-wrapper::before,
+  .professional-path-card .timeline-wrapper::before { left: 15px !important; }
+  
+  .learning-path-card .timeline-badge-container,
+  .professional-path-card .timeline-badge-container { margin-left: 15px !important; transform: translateX(0) !important; align-self: flex-start; }
+  
+  .timeline-badge-container:hover { transform: translateX(0) translateY(-3px) !important; }
+  
+  .learning-path-card .timeline-section-title,
+  .professional-path-card .timeline-section-title { margin-left: 40px !important; text-align: left; }
+  
+  .learning-path-card .timeline-item,
+  .professional-path-card .timeline-item { margin-left: 40px !important; }
+  
+  /* Alinha a bolinha marcadora perfeitamente à linha */
+  .timeline-item .marker { left: -28px !important; } 
+  
+  /* Esconde as setas do carrossel para usar apenas os pontinhos (evita toque acidental com os dedos) */
+  .design-section .carousel-btn { display: none; }
 }
