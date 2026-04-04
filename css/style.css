@@ -260,6 +260,42 @@
   }
 }
 
+/* Desktop vs Mobile text & icon */
+.text-mobile, .icon-mobile {
+  display: none;
+}
+
+.text-desktop {
+  display: block;
+}
+
+.mouse-icon-desktop {
+  width: 22px;
+  height: 34px;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+.mouse-wheel {
+  width: 4px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -2px;
+  animation: scroll-wheel 1.5s cubic-bezier(0.15, 0.41, 0.69, 0.94) infinite;
+}
+
+@keyframes scroll-wheel {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
 /* =========================================
    SECTION ABOUT (CONTAINER PRINCIPAL)
    ========================================= */
@@ -320,6 +356,13 @@
   }
   .hero-image-container {
     right: 5%;
+  }
+  
+  .text-desktop, .mouse-icon-desktop {
+    display: none;
+  }
+  .text-mobile, .icon-mobile {
+    display: block;
   }
 }
 

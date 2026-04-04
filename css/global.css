@@ -28,13 +28,22 @@
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  /* Oculta o cursor nativo para o Custom Cursor funcionar perfeitamente */
-  cursor: none !important;
 }
+
+/* Oculta o cursor nativo apenas em dispositivos com mouse (não-touch) */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 html,
 body {
   margin: 0px;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip; /* 'clip' é muito mais forte que 'hidden' no Mobile Safari para prevenir scroll */
   /* Esconde o scrollbar nativo mas permite rolar via mousewheel/drag */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE e Edge */
@@ -84,18 +93,30 @@ a {
 /* =========================================
    CUSTOM CURSOR
    ========================================= */
+/* Oculta os cursores customizados por padrão (para dispositivos touch) */
+.custom-cursor,
+.custom-cursor-follower {
+  display: none !important;
+}
+
+/* Exibe e anima os cursores customizados apenas em dispositivos com mouse */
+@media (hover: hover) and (pointer: fine) {
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
   width: 8px;
   height: 8px;
+  margin: -4px 0 0 -4px; /* Centraliza perfeitamente o cursor de 8px */
   background-color: #ffffff;
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate3d(var(--x, 0px), var(--y, 0px), 0);
+  scale: 1;
   z-index: 9999;
-  transition: transform 0.1s ease;
+  transition: scale 0.15s ease; /* Transiciona apenas a escala, mouse fica sem lag */
+  display: block !important;
+  will-change: transform, scale;
 }
 
 .custom-cursor-follower {
@@ -104,32 +125,33 @@ a {
   left: 0;
   width: 32px;
   height: 32px;
+  margin: -16px 0 0 -16px; /* Centraliza o follower de 32px */
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate3d(var(--x, 0px), var(--y, 0px), 0);
+  scale: 1;
   z-index: 9998;
-  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  transition: scale 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  display: block !important;
+  will-change: transform, scale;
 }
 
 /* Feedback ao Clicar/Arrastar */
 .custom-cursor-follower.dragging {
-  transform: translate(-50%, -50%) scale(0.8);
+  scale: 0.8;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: #ffffff;
 }
 
-/* Feedback ao Hover em links e cartões */
+/* Feedback ao Hover em links e botões (Apenas alteração de cor, sem transformação) */
 .custom-cursor.hover {
-  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .custom-cursor-follower.hover {
-  transform: translate(-50%, -50%) scale(1.5);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
 }
 
 /* =========================================

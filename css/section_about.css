@@ -264,6 +264,7 @@
 .card-header-title i {
   width: clamp(18px, 2.7vw, 33px);
   height: clamp(18px, 2.7vw, 33px);
+  font-size: clamp(18px, 2.7vw, 33px); /* Força a fonte do ícone a respeitar a fluidez */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -719,9 +720,10 @@
   gap: clamp(15px, 2.5vw, 36px);
   position: relative;
   width: 100%;
+  max-width: 100%;
   background: transparent;
   box-sizing: border-box;
-  overflow-x: hidden; /* Garante que as decorações absolutas não gerem scroll horizontal */
+  overflow-x: clip; /* Garante que as decorações absolutas não gerem scroll horizontal no iOS */
   margin-bottom: clamp(30px, 4vw, 60px); /* Aumenta o gap final entre as seções em ~30px a mais */
 }
 
@@ -1012,8 +1014,8 @@
   position: absolute;
   width: clamp(113px, 19.3vw, 279px);
   height: clamp(79px, 13.5vw, 195px);
-  left: 12%;
-  top: 65%;
+  left: 10%;
+  top: 90%;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 4;
@@ -2241,6 +2243,16 @@ body.theme-design {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Hint de Swipe oculto no Desktop */
+.design-section .swipe-hint {
+  display: none;
+}
+
+@keyframes pulse-hint {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
 /* =========================================
    FOOTER (Rodapé)
    ========================================= */
@@ -2248,7 +2260,7 @@ body.theme-design {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(15px, 2.5vw, 36px) 0 clamp(45px, 7.8vw, 112px) 0; /* Padding extra embaixo para o scroll final respirar */
+  padding: clamp(15px, 2.5vw, 36px) clamp(28px, 5vw, 69px) clamp(45px, 7.8vw, 112px); /* Adicionado padding lateral para igualar a largura com o resto das sections */
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -2317,37 +2329,24 @@ body.theme-design {
   align-items: center;
 }
 
-.site-footer .footer-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(40px, 5vw, 64px);
-  height: clamp(40px, 5vw, 64px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  color: #F8F0ED;
-  font-size: clamp(20px, 2.5vw, 32px);
-  text-decoration: none;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.site-footer .footer-link:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
 /* =========================================
    RESPONSIVIDADE (MEDIA QUERIES) - SEÇÕES
    ========================================= */
 
 /* TABLETS (até 1023px) */
 @media (max-width: 1023px) {
-  /* Expande os containers de 80% para 95% para aproveitar a tela */
+  /* Reduz os paddings laterais das seções principais para aproveitar mais a tela */
+  .section-about,
+  .section-portfolio,
+  .section-socialmedia,
+  .creator-section,
+  .design-section,
+  .site-footer {
+    padding-left: clamp(15px, 3vw, 28px);
+    padding-right: clamp(15px, 3vw, 28px);
+  }
+
+  /* Expande os containers para 100% da área útil, apoiando-se no padding seguro das sections pai */
   .article-about-me,
   .timeline-cards-container,
   .article-expertise,
@@ -2361,25 +2360,168 @@ body.theme-design {
   .design-section .subtitle,
   .design-section .article,
   .site-footer .footer-container {
-    width: 95%;
+    width: 100%;
   }
 
-  /* Empilha as colunas que precisam de mais espaço */
-  .article-expertise { flex-direction: column; }
-  .section-portfolio .article { flex-direction: column; align-items: center; }
+  /* Afina as fontes para despoluir a tela e facilitar a leitura no Tablet e Mobile */
+  .section-socialmedia .card p,
+  .section-socialmedia .highlight-text,
+  .creator-section .card p,
+  .creator-section .brand-item-card p,
+  .section-portfolio p.p,
+  .section-portfolio p.quer-jogar-silksong,
+  .expertise-card p,
+  .timeline-item span,
+  .timeline-item time,
+  .about-text-block {
+    font-weight: 400 !important; /* Afina os parágrafos descritivos para Regular (400) */
+  }
+
+  /* Afina os títulos menores para acompanhar a elegância no Tablet/Mobile */
+  .section-portfolio .title h3.text-wrapper-2,
+  .section-portfolio h4.text-wrapper-3,
+  .section-socialmedia .section-title h3,
+  .section-socialmedia .section-title-results h3,
+  .section-socialmedia .card h4,
+  .creator-section .card-header h4,
+  .creator-section .brand-title h4,
+  .design-section .card-header h4,
+  .expertise-card h3,
+  .timeline-item h4 {
+    font-weight: 600 !important; /* De 700 para 600 */
+  }
+
+  /* Reduz paddings e gaps internos das caixas principais (que usavam os 2.5vw) para que itens caibam sem estourar */
+  .article-about-me,
+  .timeline-card,
+  .article-expertise,
+  .expertise-column,
+  .section-portfolio .article,
+  .section-socialmedia .article,
+  .creator-section .article,
+  .design-section .article {
+    padding: clamp(16px, 2vw, 24px);
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  /* Empilha as colunas e aplica 'stretch' para que elas usem 100% do espaço (corrigindo a sensação de limitação) */
+  .timeline-cards-container { flex-direction: column; }
+  .article-expertise { flex-direction: column; align-items: stretch; }
+  .section-portfolio .article { flex-direction: column; align-items: stretch; }
   .section-portfolio .divs { flex-direction: column; }
-  .section-socialmedia .article { flex-direction: column; }
-  .creator-section .article { flex-direction: column; }
-  .design-section .slide-content { flex-direction: column; }
+  .section-socialmedia .article { flex-direction: column; align-items: stretch; }
+  .creator-section .article { flex-direction: column; align-items: stretch; }
+  .design-section .slide-content { flex-direction: column; align-items: stretch; }
   
-  /* Ajuste de imagens decorativas para não encavalar */
-  .section-portfolio .eevee-decorative { left: 80%; top: 6%; width: clamp(50px, 10vw, 100px); height: auto; }
+  /* Mantém a foto do Teus centralizada no Article esticado */
+  .section-portfolio .teus-img { align-self: center; width: 100%; max-width: 400px; }
+
+  /* Previne colapso de altura (flex-basis: 0) quando elementos que usavam flex de expansão viram coluna */
+  .about-text-column,
+  .timeline-card,
+  .expertise-column,
+  .section-portfolio .teus-img,
+  .section-portfolio .divs,
+  .section-portfolio .grid,
+  .section-portfolio .grid-2,
+  .section-socialmedia .creator-profile,
+  .section-socialmedia .content-wrapper,
+  .section-socialmedia .column,
+  .section-socialmedia .result-card,
+  .creator-section .creator-profile,
+  .creator-section .content-wrapper,
+  .creator-section .brand-column,
+  .creator-section .brand-item-card,
+  .design-section .image-wrapper,
+  .design-section .content-wrapper {
+    flex: unset;
+  }
+
+  /* Previne que colunas e balões filhos vazem (overflow) do container flexbox */
+  .section-portfolio .teus-img,
+  .section-portfolio .divs,
+  .section-portfolio .grid,
+  .section-portfolio .grid-2,
+  .section-socialmedia .creator-profile,
+  .section-socialmedia .content-wrapper,
+  .creator-section .creator-profile,
+  .creator-section .content-wrapper,
+  .design-section .image-wrapper,
+  .design-section .content-wrapper {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .section-socialmedia .grid-container,
+  .section-socialmedia .results-grid,
+  .creator-section .brands-grid {
+    flex-direction: column;
+  }
+
+  /* Ajuste de imagens decorativas para não encavalar e NÃO GERAR SCROLL (Ancorado na direita, não via % da esquerda) */
+  .section-portfolio .eevee-decorative { left: auto; right: 2%; top: 6%; width: clamp(50px, 10vw, 100px); height: auto; }
   .section-portfolio .silksong-decorative { left: 2%; top: 98%; width: clamp(80px, 15vw, 120px); height: auto; }
-  .section-portfolio .teus-img { width: 100%; max-width: 400px; }
 }
 
 /* SMARTPHONES (até 767px) */
 @media (max-width: 767px) {
+  /* Libera espaço lateral espremendo os paddings das seções ao mínimo seguro */
+  .section-about,
+  .section-portfolio,
+  .section-socialmedia,
+  .creator-section,
+  .design-section,
+  .site-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Reduz os paddings internos das caixas (Glassmorphism) para o texto e imagens crescerem */
+  .article-about-me,
+  .timeline-card,
+  .article-expertise,
+  .section-portfolio .article,
+  .section-socialmedia .article,
+  .creator-section .article,
+  .design-section .article,
+  .site-footer .footer-container {
+    padding: 16px 12px;
+  }
+
+  /* Balões ainda mais compactos no celular para sobrar espaço vital para o texto */
+  .section-socialmedia .card,
+  .section-socialmedia .result-card,
+  .creator-section .card,
+  .creator-section .brand-item-card {
+    padding: 12px;
+  }
+
+  .expertise-column {
+    padding: 10px 0;
+  }
+
+  /* Retira o espaço morto deixado pelas setas invisíveis do carrossel */
+  .design-section .carousel-slide {
+    padding: 0;
+  }
+
+  /* Mantém em 100% da área segura com base no padding das seções */
+  .article-about-me,
+  .timeline-cards-container,
+  .article-expertise,
+  .section-portfolio h1.text-wrapper,
+  .section-portfolio .subtitle,
+  .section-portfolio .article,
+  .section-socialmedia .subtitle,
+  .section-socialmedia .article,
+  .creator-section .subtitle,
+  .creator-section .article,
+  .design-section .subtitle,
+  .design-section .article,
+  .site-footer .footer-container {
+    width: 100%;
+  }
+
   /* Empilha todo o restante para visualização vertical no celular */
   .article-about-me { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
   .timeline-cards-container { flex-direction: column; gap: 24px; }
@@ -2399,6 +2541,14 @@ body.theme-design {
   /* Esconde tipografia gigante de background no mobile para não gerar ruído visual */
   .aa-decorative, .decorative { display: none; }
   
+  /* Garante que os ícones do Learning Path e Trajetória Profissional fiquem agradáveis no mobile */
+  .card-header-title i,
+  .card-header-title img {
+    font-size: 22px !important;
+    width: 22px !important;
+    height: 22px !important;
+  }
+
   /* Ajuste Fino da Timeline para telas pequenas */
   .learning-path-card .timeline-wrapper::before,
   .professional-path-card .timeline-wrapper::before { left: 15px !important; }
@@ -2419,4 +2569,19 @@ body.theme-design {
   
   /* Esconde as setas do carrossel para usar apenas os pontinhos (evita toque acidental com os dedos) */
   .design-section .carousel-btn { display: none; }
+
+  /* Mostra o texto indicativo de Arraste no Mobile */
+  .design-section .swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--design-200);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    opacity: 0.8;
+    animation: pulse-hint 2s infinite;
+  }
 }

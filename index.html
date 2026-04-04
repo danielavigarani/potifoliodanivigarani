@@ -5,6 +5,10 @@
     <meta charset="utf-8" />
     <meta name="description" content="Dani Vigarani - Portfolio" />
     <title>Dani Vigarani - Portfolio</title>
+    
+    <!-- Ícone da Página (Favicon) - Fingerprint Duotone -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon/fingerprint-duotone.svg" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nunito:wght@600;700&family=Roboto+Serif:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
@@ -18,6 +22,11 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css"
     />
     
     <link rel="stylesheet" href="css/global.css" />
@@ -35,10 +44,10 @@
       <nav class="navbar">
         <div class="logo">Dani<br><span class="vigarani-logo">Vigarani</span></div>
 
-          <div class="maintenance-alert" role="alert">
+           <div class="maintenance-alert" role="alert">
           <i class="fa-solid fa-person-digging"></i>
-          <span>Site em construção (Início: 23/03/2026). Em breve finalizado!</span>
-        </div>
+          <span>Site em construção. Em breve finalizado!</span>
+        </div> 
         
         <div class="social-links">
           
@@ -70,8 +79,12 @@
       </div>
 
       <div class="scroll-indicator">
-        <span>ARRASTE PARA CONTINUAR</span>
-        <img src="img/vector.svg" alt="Seta para baixo" loading="lazy" />
+        <span class="text-mobile">ARRASTE PARA CONTINUAR</span>
+        <span class="text-desktop">SCROLLAR PARA CONTINUAR</span>
+        <img class="icon-mobile" src="img/vector.svg" alt="Seta para baixo" loading="lazy" />
+        <div class="mouse-icon-desktop">
+          <div class="mouse-wheel"></div>
+        </div>
       </div>
     </header>
 
@@ -583,6 +596,10 @@
       </button>
 
       <div class="carousel-track-wrapper">
+        <div class="swipe-hint" aria-hidden="true">
+          <i class="ph ph-arrows-left-right"></i> Arraste para o lado
+        </div>
+
         <ul class="carousel-track">
           
           <!-- Slide 1: Tarot -->
@@ -595,7 +612,7 @@
                 <div class="card">
                   <div class="card-header">
                     <i class="ph ph-paint-brush card-icon" aria-hidden="true"></i>
-                    <h4>O Universo de Florence</h4>
+                    <h4>Universo do Tarot</h4>
                   </div>
                   <p>Para esse projeto com estética scrapbook, o objetivo foi traduzir o misticismo e a simbologia das cartas para o visual. Como o Tarot faz parte dos meus estudos e rituais diários, coloquei essa vivência na direção de arte, unindo texturas rasgadas e colagens a significados reais, criando algo que vai além do estético.</p>
                 </div>
@@ -633,7 +650,7 @@
                     <i class="ph ph-bezier-curve card-icon" aria-hidden="true"></i>
                     <h4>Projeto Athenas</h4>
                   </div>
-                  <p>Uma imersão visual inspirada na delicadeza e nas narrativas cotidianas que tanto amo explorar. O desafio aqui foi capturar a essência da história e a atmosfera emocional de Florence através de sobreposições e recortes, traduzindo sentimentos, intimidade e memórias em uma única composição.</p>
+                  <p>Mais do que telas bonitas, desenhei fluxos de interação. Com a visão de quem também estrutura e desenvolve componentes (Figma, HTML, CSS), esse projeto foca em uma jornada do usuário fluida, unindo estética limpa com usabilidade inteligente.</p>
                 </div>
               </div>
             </div>
@@ -664,15 +681,21 @@
       <p class="footer-slogan">"Design que engaja.<br>Dados que convertem."</p>
     </div>
     <div class="footer-socials">
-      <a href="https://www.instagram.com/adanicosmica" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Instagram">
-        <i class="ph ph-instagram-logo"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/daniela-vigarani/" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn">
-        <i class="ph ph-linkedin-logo"></i>
-      </a>
-      <a href="mailto:danielavigaranisilva@gmail.com" class="footer-link" aria-label="Email">
-        <i class="ph ph-envelope-simple"></i>
-      </a>
+      <div class="liquid-metal-link">
+        <a href="https://www.instagram.com/adanicosmica" target="_blank" rel="noopener noreferrer" class="outline" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+      </div>
+      <div class="liquid-metal-link">
+        <a href="https://www.linkedin.com/in/daniela-vigarani/" target="_blank" rel="noopener noreferrer" class="outline" aria-label="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+      </div>
+      <div class="liquid-metal-link">
+        <a href="mailto:danielavigaranisilva@gmail.com" class="outline" aria-label="Email">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
@@ -735,6 +758,29 @@
         backToTopBtn.addEventListener("click", () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
+
+        // =========================================
+        // LÓGICA DE ARRASTAR (SWIPE) NO CARROSSEL MOBILE
+        // =========================================
+        const trackWrapper = document.querySelector('.carousel-track-wrapper');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (trackWrapper) {
+          trackWrapper.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, {passive: true});
+
+          trackWrapper.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (diff > 50) { // Arrastou para a esquerda -> próximo slide
+              document.querySelector('.design-section .next-btn')?.click();
+            } else if (diff < -50) { // Arrastou para a direita -> slide anterior
+              document.querySelector('.design-section .prev-btn')?.click();
+            }
+          }, {passive: true});
+        }
       });
     </script>
   </body>

@@ -2,6 +2,11 @@
 // DRAG TO SCROLL & KEYBOARD NAVIGATION
 // =========================================
 document.addEventListener('DOMContentLoaded', () => {
+  // Desativa a funcionalidade em dispositivos touch (celulares/tablets) para permitir o scroll natural nativo
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    return;
+  }
+
   let isDragging = false;
   let startY;
   let scrollTop;

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <!-- Gradiente que brilha e fica elegante tanto no Light Mode (fundo claro da guia) quanto Dark Mode (fundo escuro) -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB375B" />  <!-- Deep Crimson (Rosa/Vermelho) -->
+      <stop offset="100%" stop-color="#884DCC" /> <!-- Design Amethyst (Roxo) -->
+    </linearGradient>
+  </defs>
+  
+  <rect width="256" height="256" fill="none"/>
+  
+  <!-- Phosphor Fingerprint Duotone Style -->
+  
+  <!-- Camada de Fundo Duotone (Opacidade 40%) -->
+  <g fill="none" stroke="url(#neonGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" opacity="0.9">
+    <path d="M96,224v-8a80,80,0,0,1,160,0v8" />
+    <path d="M180,41A143.76,143.76,0,0,0,32,216" />
+  </g>
+
+  <!-- Camada de Destaque Sólida (Opacidade 100%) -->
+  <g fill="none" stroke="url(#neonGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+    <path d="M128,224v-8a48,48,0,0,1,96,0v8" />
+    <path d="M160,224v-8a16,16,0,0,0-32,0" />
+    <path d="M64,224v-8A112,112,0,0,1,213.56,66.86" />
+  </g>
+</svg>
