@@ -2333,20 +2333,20 @@ body.theme-design {
    RESPONSIVIDADE (MEDIA QUERIES) - SEÇÕES
    ========================================= */
 
-/* TABLETS (até 1023px) */
-@media (max-width: 1023px) {
-  /* Reduz os paddings laterais das seções principais para aproveitar mais a tela */
+/* TABLETS (até 1024px - Engloba iPad em modo Paisagem) */
+@media (max-width: 1024px) {
+  /* Remove os paddings laterais das seções principais para evitar cálculos duplos com a largura dos filhos */
   .section-about,
   .section-portfolio,
   .section-socialmedia,
   .creator-section,
   .design-section,
   .site-footer {
-    padding-left: clamp(15px, 3vw, 28px);
-    padding-right: clamp(15px, 3vw, 28px);
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  /* Expande os containers para 100% da área útil, apoiando-se no padding seguro das sections pai */
+  /* Força matematicamente os containers a usarem exatos 95% da tela */
   .article-about-me,
   .timeline-cards-container,
   .article-expertise,
@@ -2360,7 +2360,8 @@ body.theme-design {
   .design-section .subtitle,
   .design-section .article,
   .site-footer .footer-container {
-    width: 100%;
+    width: 95% !important;
+    max-width: 95% !important;
   }
 
   /* Afina as fontes para despoluir a tela e facilitar a leitura no Tablet e Mobile */
@@ -2413,8 +2414,12 @@ body.theme-design {
   .creator-section .article { flex-direction: column; align-items: stretch; }
   .design-section .slide-content { flex-direction: column; align-items: stretch; }
   
-  /* Mantém a foto do Teus centralizada no Article esticado */
-  .section-portfolio .teus-img { align-self: center; width: 100%; max-width: 400px; }
+  /* Mantém as fotos de perfil centralizadas e não esticadas nos Articles (Tablet) */
+  .section-portfolio .teus-img,
+  .section-socialmedia .creator-profile,
+  .creator-section .creator-profile { 
+    align-self: center; width: 100%; max-width: 400px; 
+  }
 
   /* Previne colapso de altura (flex-basis: 0) quando elementos que usavam flex de expansão viram coluna */
   .about-text-column,
@@ -2519,7 +2524,8 @@ body.theme-design {
   .design-section .subtitle,
   .design-section .article,
   .site-footer .footer-container {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   /* Empilha todo o restante para visualização vertical no celular */

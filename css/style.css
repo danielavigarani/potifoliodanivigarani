@@ -346,8 +346,8 @@
    RESPONSIVIDADE (MEDIA QUERIES) - HERO
    ========================================= */
 
-/* TABLETS (até 1023px) */
-@media (max-width: 1023px) {
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
   .navbar {
     padding: 30px;
   }
