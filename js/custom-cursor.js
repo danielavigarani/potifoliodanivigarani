@@ -50,8 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
       follower.classList.remove('hover');
     });
   });
-
-  // Estado de clique/drag (Reage globalmente ao pressionar o botão do mouse)
-  window.addEventListener('mousedown', () => follower.classList.add('dragging'));
-  window.addEventListener('mouseup', () => follower.classList.remove('dragging'));
 });
