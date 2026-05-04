@@ -142,9 +142,9 @@
    ========================================= */
 .timeline-cards-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: stretch; /* Faz os cards esticarem e ficarem com a mesma altura */
+  align-items: center;
   padding: 0px;
   gap: clamp(20px, 3.5vw, 50px);
   width: 80%;
@@ -152,6 +152,25 @@
   height: auto;
   isolation: isolate;
   z-index: 3;
+}
+
+/* Grid para unificar as duas colunas dentro do mesmo cartão */
+.unified-timeline-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: clamp(20px, 4vw, 50px);
+  width: 100%;
+}
+
+.timeline-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(9px, 1.5vw, 21px);
+  min-width: 0;
 }
 
 /* Base dos Cards Maiores (Learning / Professional Path) */
@@ -163,10 +182,9 @@
   align-items: center;
   padding: clamp(15px, 2.5vw, 36px);
   gap: clamp(9px, 1.5vw, 21px);
-  width: 100%;
+  width: 100%; /* Preenche todo o container pai que já controla a largura (80%) */
+  max-width: 100%;
   height: auto;
-  min-height: clamp(464px, 53.3vw, 768px); /* Devolvendo a altura mínima fluida */
-  flex: 1; /* Faz os cards dividirem o espaço disponível por igual */
   
   /* 1. O CORPO DO CARTÃO (Vidro Onyx) */
   background: 
@@ -273,8 +291,8 @@
 .card-header-title h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: clamp(18px, 2.3vw, 33px);
-  line-height: clamp(22px, 2.9vw, 41px);
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: clamp(22px, 2.4vw, 34px);
   color: #FFFFFF;
   margin: 0;
   text-align: center;
@@ -283,8 +301,8 @@
 }
 
 .professional-path-card .card-header-title h2 {
-  font-size: clamp(16px, 2vw, 29px);
-  line-height: clamp(20px, 2.4vw, 35px);
+  font-size: clamp(16px, 1.8vw, 25px);
+  line-height: clamp(20px, 2.2vw, 30px);
   max-width: 414px;
 }
 
@@ -295,10 +313,8 @@
   padding: clamp(3px, 0.4vw, 6px) 0px;
   gap: clamp(6px, 1vw, 14px);
   width: 100%;
-  max-width: 506px;
+  max-width: 800px; /* Alargado para caber o layout expandido mantendo proporção */
   height: auto;
-  flex: 1; /* Permite que o miolo cresça e puxe a linha branca até o final do card */
-  max-width: 100%;
   position: relative;
   isolation: isolate;
 }
@@ -326,15 +342,13 @@
   transform: scaleY(1); /* Expande a linha até o tamanho original */
 }
 
-.learning-path-card .timeline-wrapper::before {
-  left: clamp(29px, 5vw, 72px);
-  height: 100%; /* Let it fill the container */
+/* Fixando posições exatas em px para a matemática das linhas fechar perfeitamente */
+.learning-path-card .timeline-wrapper::before,
+.professional-path-card .timeline-wrapper::before {
+  left: 80px;
+  height: 96%;
 }
 
-.professional-path-card .timeline-wrapper::before {
-  left: clamp(33px, 5.6vw, 81px);
-  height: 100%;
-}
 
 /* Badges dos Anos (2024 - 2026) */
 .timeline-badge-container {
@@ -365,23 +379,17 @@
   transform: translateX(-50%); /* Centraliza o badge na linha da timeline */
 }
 
-.learning-path-card .timeline-badge-container {
-  margin-left: clamp(29px, 5vw, 72px);
-}
-
+.learning-path-card .timeline-badge-container,
 .professional-path-card .timeline-badge-container {
-  margin-left: clamp(33px, 5.6vw, 81px);
-}
-
-.professional-path-card .timeline-badge-container {
+  margin-left: 80px;
   min-width: clamp(90px, 11vw, 161px);
 }
 
 .timeline-badge {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: clamp(11px, 1.2vw, 17px);
-  line-height: clamp(14px, 1.5vw, 21px);
+  font-size: clamp(11px, 1.1vw, 15px);
+  line-height: clamp(14px, 1.3vw, 19px);
   text-align: center;
   color: #F2F2F2;
 }
@@ -390,19 +398,16 @@
 .timeline-section-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(11px, 1.1vw, 14px);
-  line-height: clamp(14px, 1.4vw, 18px);
+  font-size: clamp(11px, 1vw, 13px);
+  line-height: clamp(14px, 1.2vw, 17px);
   color: #FFFFFF;
   z-index: 1;
   opacity: 0; /* Invisível antes da animação sequencial */
 }
 
-.learning-path-card .timeline-section-title {
-  margin: 0 0 0 clamp(41px, 6.9vw, 102px);
-}
-
+.learning-path-card .timeline-section-title,
 .professional-path-card .timeline-section-title {
-  margin: 0 0 0 clamp(45px, 7.6vw, 110px);
+  margin: 0 0 0 120px;
 }
 
 /* =========================================
@@ -452,20 +457,17 @@
   transform: translateX(-50%) translateY(-3px);
 }
 
-.learning-path-card .timeline-item {
-  margin-left: clamp(41px, 6.9vw, 102px);
-}
-
+.learning-path-card .timeline-item,
 .professional-path-card .timeline-item {
-  margin-left: clamp(45px, 7.6vw, 110px);
+  margin-left: 120px;
 }
 
 /* Tipografia dos Cursos/Trabalhos */
 .timeline-item h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(14px, 1.5vw, 22px);
-  line-height: clamp(16px, 1.8vw, 26px);
+  font-size: clamp(13px, 1.3vw, 18px);
+  line-height: clamp(16px, 1.6vw, 24px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -473,47 +475,46 @@
 .timeline-item span {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(12px, 1.2vw, 18px);
-  line-height: clamp(14px, 1.5vw, 22px);
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: clamp(14px, 1.4vw, 20px);
   color: #B3B3B3;
 }
 
 .timeline-item time {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: clamp(11px, 1.1vw, 15px);
-  line-height: clamp(14px, 1.4vw, 20px);
+  font-size: clamp(10px, 0.9vw, 13px);
+  line-height: clamp(12px, 1.1vw, 16px);
   color: #808080;
 }
 
 /* Marcadores ao lado de cada item */
 .timeline-item .marker {
   position: absolute;
-  width: clamp(6px, 1vw, 14px);
-  height: clamp(6px, 1vw, 14px);
-  left: clamp(-18px, -3vw, -38px);
+  width: 12px;
+  height: 12px;
+  left: -45px; /* Exatos -45px + 120px (margin do pai) + 6px (meio da bolinha) = 81px exatos do centro da linha! */
   top: 50%;
   transform: translateY(-50%);
   background: #F2F2F2;
   border-radius: 50%;
 }
 
+/* Ícone da Credencial do Coursera */
+.timeline-item span a i.ph-link {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
 .professional-path-card {
   position: relative; /* Obrigatório para ancorar o gato absoluto */
-  
-  /* Incorpora a elipse brilhante do cérebro diretamente no background!
-     Isso evita o uso de pseudo-elementos, permitindo que a borda neon do .timeline-card funcione perfeitamente aqui também. */
-  background: 
-    radial-gradient(circle at 50% calc(100% - 75px), rgba(153, 153, 153, 0.25) 0%, transparent 35%),
-    linear-gradient(235deg, rgba(51, 51, 51, 0.8), transparent 40%), 
-    linear-gradient(45deg, rgba(26, 26, 26, 0.8), transparent 40%), 
-    rgba(18, 18, 18, 0.7);
+  background: none; /* Remove o brilho antigo que estava deixando a coluna com visual opaco/manchado */
 }
 
 /* Efeito decorativo final (Brain Icon) */
 .professional-path-card .deco-final {
   display: block; /* Garante que não herde inline-flex */
-  margin-top: clamp(-3px, -0.5vw, -7px);
+  margin-top: clamp(15px, 2.5vw, 30px); /* Dá um respiro entre a última experiência e o topo da imagem do cérebro */
   
   /* Dimensões do Figma */
   width: clamp(71px, 12vw, 176px); 
@@ -2407,6 +2408,7 @@ body.theme-design {
 
   /* Empilha as colunas e aplica 'stretch' para que elas usem 100% do espaço (corrigindo a sensação de limitação) */
   .timeline-cards-container { flex-direction: column; }
+  .unified-timeline-grid { flex-direction: column; gap: clamp(30px, 5vw, 60px); }
   .article-expertise { flex-direction: column; align-items: stretch; }
   .section-portfolio .article { flex-direction: column; align-items: stretch; }
   .section-portfolio .divs { flex-direction: column; }
@@ -2424,6 +2426,7 @@ body.theme-design {
   /* Previne colapso de altura (flex-basis: 0) quando elementos que usavam flex de expansão viram coluna */
   .about-text-column,
   .timeline-card,
+  .timeline-column,
   .expertise-column,
   .section-portfolio .teus-img,
   .section-portfolio .divs,
@@ -2557,21 +2560,21 @@ body.theme-design {
 
   /* Ajuste Fino da Timeline para telas pequenas */
   .learning-path-card .timeline-wrapper::before,
-  .professional-path-card .timeline-wrapper::before { left: 15px !important; }
+  .professional-path-card .timeline-wrapper::before { left: 20px !important; }
   
   .learning-path-card .timeline-badge-container,
-  .professional-path-card .timeline-badge-container { margin-left: 15px !important; transform: translateX(0) !important; align-self: flex-start; }
+  .professional-path-card .timeline-badge-container { margin-left: 20px !important; transform: translateX(0) !important; align-self: flex-start; }
   
   .timeline-badge-container:hover { transform: translateX(0) translateY(-3px) !important; }
   
   .learning-path-card .timeline-section-title,
-  .professional-path-card .timeline-section-title { margin-left: 40px !important; text-align: left; }
+  .professional-path-card .timeline-section-title { margin-left: 50px !important; text-align: left; }
   
   .learning-path-card .timeline-item,
-  .professional-path-card .timeline-item { margin-left: 40px !important; }
+  .professional-path-card .timeline-item { margin-left: 50px !important; }
   
   /* Alinha a bolinha marcadora perfeitamente à linha */
-  .timeline-item .marker { left: -28px !important; } 
+  .timeline-item .marker { left: -35px !important; } 
   
   /* Esconde as setas do carrossel para usar apenas os pontinhos (evita toque acidental com os dedos) */
   .design-section .carousel-btn { display: none; }
